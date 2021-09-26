@@ -1,3 +1,20 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#login-session-form{
+  // background-color:blue;
+  display:block;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+  background-color: #fff;
+}
+
+#login-center-section{
+  width:700px;
+  margin:auto;
+  // outline: 1px solid #036cdb !important;
+}
+
+#login-base{
+}

@@ -8,9 +8,9 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
 
-  def self.find_by_credentials(user_params)
-    user = User.find_by(username: user_params[:username])
-    user && user.is_password?(user_params[:password]) ? user : nil
+  def self.find_by_credentials(username,password)
+    user = User.find_by(username: username)
+    user && user.is_password?(password) ? user : nil
   end
 
   def ensure_session_token
@@ -30,4 +30,5 @@ class User < ApplicationRecord
     update!(session_token: SecureRandom::urlsafe_base64)
     session_token
   end
+
 end

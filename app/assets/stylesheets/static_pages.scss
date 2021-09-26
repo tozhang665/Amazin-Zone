@@ -1,3 +1,17 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.button {
+  // font: bold 11px Arial;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  text-decoration: none;
+  // background-color: #f0c14b;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  background:#f0c14b;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#a88734 #9c7e31 #846a29;
+}
