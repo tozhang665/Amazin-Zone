@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       login!(@user)
     else
       @user = User.new
-      flash.now[:errors] = { base: ['Invalid username or password'] }
+      flash.now[:errors] = { base: ['Invalid email or password'] }
       render :new
     end
   end
@@ -23,6 +23,6 @@ class SessionsController < ApplicationController
 
  private
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:email, :password)
   end
 end

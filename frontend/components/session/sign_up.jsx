@@ -5,7 +5,6 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
       password: '',
       email:'',
     };
@@ -24,46 +23,40 @@ class SignUp extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
-  render() {
+render() {
     return (
-      <div id="login-session-form">
-        <h2>Sign Up!</h2>
-        <div id="login-center-section">
 
-          <div id="login-base">
-          <form>
-            <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')}
-            />
-            </label>
-            <label>Email:
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.handleInput('email')}
-            />
-            </label>
+      <div id="login-container">
 
-            <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleInput('password')}
-            />
-              <button className="button" onClick={this.handleSubmit}>Sign Up!</button>
-            </label>
-          </form>
+        <div id="login-session-form">
+          <div id="login-title"><h2>Sign-Up</h2></div>
 
+          <div id="login-center-section">
+
+            <div id="login-base">
+            <form id="login-form">
+              <label className="login-label">Email
+                <br />
+              <input className="login-input" type="text" value={this.state.email} onChange={this.handleInput('email')} />
+              </label>
+              <br />
+              <label className="login-label">Password
+                <br />
+              <input className="login-input" type="password" value={this.state.password} onChange={this.handleInput('password')} />
+              </label>
+              <br />
+              <button className="button login-button" onClick={this.handleSubmit}>Sign-up</button>
+            </form>
+            </div>
           </div>
+          <br />
+
+          <Link className="button cancel-button" to="/">Cancel Sign-Up</Link>
+
         </div>
-      <Link className="button"to="/">Cancel SignUp</Link>
       </div>
 
     );
   }
 }
-
 export default SignUp;

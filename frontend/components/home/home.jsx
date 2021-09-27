@@ -9,18 +9,26 @@ class Home extends React.Component{
     let {currentUser,logout} = this.props
     if (currentUser === null){
       return(
-        <div>
+        <header className="home-title">
+          <p>
           Amazin'Zone
+          </p>
+          <div>
           <Link className="button" to="/login">Sign-in</Link>
           <Link className="button" to="/signup">Sign-up</Link>
-        </div>
+          </div>
+        </header>
       )
     }else{
       return(
-        <div>
+        <header className="home-title">
+          <p>
           Amazin'Zone
-          <button class="button" onClick={()=>logout()}>Log-Out</button>
-        </div>
+          </p>
+          <div>
+          <button className="button" onClick={()=>logout()}>Log-Out</button>
+          </div>
+        </header>
       )
     }
   }
