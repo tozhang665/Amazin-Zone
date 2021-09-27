@@ -2,19 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#login-container{
+  display: flex;
+  justify-content: center;
+}
+
 #login-session-form{
   // background-color:blue;
   display:block;
+  align-items: center;
   border-radius: 4px;
   border: 1px #ddd solid;
   background-color: #fff;
+  
+}
+
+#login-title{
+  display:inline-block;
 }
 
 #login-center-section{
-  width:700px;
+  width:300px;
   margin:auto;
   // outline: 1px solid #036cdb !important;
 }
 
-#login-base{
+#login-form{
+  font-size: 13px;
+  margin-left: 15px;
+}
+
+.login-label{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  
+}
+.login-input{
+  // display: block;
+  // margin-left: auto;
+  // margin-right: auto;
+  width: 97%;
+}
+
+.login-button{
+  display: block;
+  margin-top:10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
 }
