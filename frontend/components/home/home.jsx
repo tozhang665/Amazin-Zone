@@ -10,12 +10,20 @@ class Home extends React.Component{
     if (currentUser === null){
       return(
         <header className="home-title">
-          <p>
-          Amazin'Zone
-          </p>
-          <div>
-          <Link className="button" to="/login">Sign-in</Link>
-          <Link className="button" to="/signup">Sign-up</Link>
+          <div id="navbar">
+            <div id="nav-belt">
+              <div id="nav-left">
+              Amazin'Zone
+              </div>
+
+              <div id="nav-fill">
+                <input type="text" />
+              </div>
+              <div id="nav-right">
+              <Link className="button" to="/login">Sign-in</Link>
+              <Link className="button" to="/signup">Sign-up</Link>
+              </div>
+            </div>
           </div>
         </header>
       )
