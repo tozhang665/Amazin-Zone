@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Login extends React.Component {
+class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
       password: '',
+      email:'',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -19,14 +20,14 @@ class Login extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state)
+    this.props.createNewUser(this.state)
       .then(() => this.props.history.push('/'));
   }
 
   render() {
     return (
       <div id="login-session-form">
-        <h2>Log In!</h2>
+        <h2>Sign Up!</h2>
         <div id="login-center-section">
 
           <div id="login-base">
@@ -38,6 +39,13 @@ class Login extends React.Component {
               onChange={this.handleInput('username')}
             />
             </label>
+            <label>Email:
+            <input
+              type="text"
+              value={this.state.email}
+              onChange={this.handleInput('email')}
+            />
+            </label>
 
             <label>Password:
             <input
@@ -45,17 +53,17 @@ class Login extends React.Component {
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
-              <button className="button" onClick={this.handleSubmit}>Log In!</button>
+              <button className="button" onClick={this.handleSubmit}>Sign Up!</button>
             </label>
           </form>
 
           </div>
         </div>
-      <Link className="button"to="/">Cancel Login</Link>
+      <Link className="button"to="/">Cancel SignUp</Link>
       </div>
 
     );
   }
 }
 
-export default Login;
+export default SignUp;
