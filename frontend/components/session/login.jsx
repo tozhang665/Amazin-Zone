@@ -46,6 +46,14 @@ class Login extends React.Component {
               </label>
               <br />
               <button className="button login-button" onClick={this.handleSubmit}>Sign-in</button>
+              <br />
+              <button className="button login-button" onClick={()=>{
+                let demoState = {password:"demopassword",email:"demo.io"}
+                this.props.login(demoState).then(() => this.props.history.push('/'));
+              }
+              
+              }>Demo-Login</button>
+
             </form>
             </div>
           </div>

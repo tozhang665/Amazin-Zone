@@ -14,6 +14,7 @@ user4 = User.new({password:"delta",email:"delta.io"})
 user5 = User.new({password:"echo",email:"echo.io"})
 user6 = User.new({password:"foxtrot",email:"foxtrot.io"})
 
+user.save!
 user1.save!
 user2.save!
 user3.save!
