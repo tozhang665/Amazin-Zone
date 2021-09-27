@@ -25,6 +25,8 @@ class Home extends React.Component{
           <p>
           Amazin'Zone
           </p>
+          <div>Hello {currentUser.email}</div>
+          <br />
           <div>
           <button className="button" onClick={()=>logout()}>Log-Out</button>
           </div>
