@@ -14,8 +14,18 @@
   border-style: solid;
   border-width: 1px;
   border-color:#a88734 #9c7e31 #846a29;
+  border-radius: 5px;
 }
 
 .button:hover{
   cursor: pointer;
+  background: #E2A712;
+}
+
+.button:active{
+  background: #AA7E0E;
+}
+
+body{
+  color:#2E2532;
 }

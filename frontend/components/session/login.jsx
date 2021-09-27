@@ -23,6 +23,24 @@ class Login extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+
+
+   renderErrors() {
+    return(
+      <ul>
+        {this.props.sessionErrors.map((error, i) => (
+          <li className="login-errors" key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  componentWillUnmount(){
+    this.props.resetErrors();
+  }
+
   render() {
     return (
 
@@ -47,18 +65,22 @@ class Login extends React.Component {
               <br />
               <button className="button login-button" onClick={this.handleSubmit}>Sign-in</button>
               <br />
-              <button className="button login-button" onClick={()=>{
-                let demoState = {password:"demopassword",email:"demo.io"}
-                this.props.login(demoState).then(() => this.props.history.push('/'));
-              }
-              
-              }>Demo-Login</button>
+
 
             </form>
+
+            <div id = "login-form">
+              <button className="button demo-button" onClick={()=>{
+                let demoUser = {email:"demo.io",password:"demopassword"}
+                this.props.login(demoUser).then(() => this.props.history.push('/'))
+                }
+              }
+              >Demo-Login</button>
+            </div>
             </div>
           </div>
           <br />
-
+          {this.renderErrors()}
           <Link className="button cancel-button" to="/">Cancel Login</Link>
 
         </div>

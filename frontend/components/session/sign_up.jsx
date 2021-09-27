@@ -23,13 +23,30 @@ class SignUp extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.sessionErrors.map((error, i) => (
+          <li className="login-errors" key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+
+  componentWillUnmount(){
+    this.props.resetErrors();
+  }
+
 render() {
     return (
 
       <div id="login-container">
 
         <div id="login-session-form">
-          <div id="login-title"><h2>Sign-Up</h2></div>
+          <div id="login-title"><h2>Sign-up</h2></div>
 
           <div id="login-center-section">
 
@@ -46,12 +63,13 @@ render() {
               </label>
               <br />
               <button className="button login-button" onClick={this.handleSubmit}>Sign-up</button>
+              <br />
             </form>
             </div>
           </div>
           <br />
-
-          <Link className="button cancel-button" to="/">Cancel Sign-Up</Link>
+          {this.renderErrors()}
+          <Link className="button cancel-button" to="/">Cancel Submit</Link>
 
         </div>
       </div>
