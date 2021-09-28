@@ -85,9 +85,6 @@ class Login extends React.Component {
           <br />
           {this.renderErrors()}
           <Link className="button" id="signup-Link"to="/signup">Create your Amazin Account</Link>
-          <br />
-          <br />
-          <Link className="button" id="cancel-button" to="/">Cancel Login</Link>
         </div>
 
 
