@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     resources :users, only:[:create,:show]
   end
 
+  resources :products , only: :show
+
 end

@@ -21,3 +21,8 @@ user3.save!
 user4.save!
 user5.save!
 user6.save!
+
+
+product1 = Product.new({title:"soap",description:"nice smelling soap",price:10.99})
+
+product1.save!
