@@ -41,12 +41,18 @@ class SignUp extends React.Component {
   }
 
 render() {
-    return (
+   return (
 
+      <div className="login-component">
+        <div id="login-logo-container">
+        <Link className="mainLogo-link"to="/"><img id="login-logo" src={window.main_logo} alt="main logo" /></Link>
+        </div>
+      <br />
       <div id="login-container">
 
+
         <div id="login-session-form">
-          <div id="login-title"><h2>Sign-up</h2></div>
+          <div id="login-title"><h2 id="login-title">Create Account</h2></div>
 
           <div id="login-center-section">
 
@@ -62,18 +68,18 @@ render() {
               <input className="login-input" type="password" value={this.state.password} onChange={this.handleInput('password')} />
               </label>
               <br />
-              <button className="button login-button" onClick={this.handleSubmit}>Sign-up</button>
+              <button className="button login-button" onClick={this.handleSubmit}>Create Account</button>
               <br />
+
             </form>
+
             </div>
           </div>
           <br />
           {this.renderErrors()}
-          <Link className="button cancel-button" to="/">Cancel Submit</Link>
-
         </div>
       </div>
-
+      </div>
     );
   }
 }

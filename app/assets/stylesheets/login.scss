@@ -3,9 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.login-component{
+  
+}
+
+#login-title{
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+#login-logo-container{
+  display: flex;
+  justify-content: center;
+  // width: 60%;
+  height: 400px;
+}
+
+// .main-Logo-link{
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+
+// }
+
 #login-container{
   display: flex;
   justify-content: center;
+  // padding: 100px;
 }
 
 #login-session-form{
@@ -15,7 +41,7 @@
   border-radius: 4px;
   border: 1px #ddd solid;
   background-color: #fff;
-  padding:5px;
+  padding:25px;
   
 }
 
@@ -37,6 +63,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  font-size:16px;
+  line-height: 19px;
+  font-weight: 700;
   width: 85%;
   
 }
@@ -46,7 +75,7 @@
   // margin-right: auto;
   width: 97%;
   padding: 5px;
-  font-size:10px
+  font-size:15px;
 }
 
 .login-button{
@@ -82,13 +111,14 @@ input{
 }
 
 
-#signup-Link, #cancel-button{
+#signup-Link{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 85%;
   text-align: center;
   background-color: #EBEBEB;
+  margin-top: 10px;
 }
 
 #signup-Link:hover, #cancel-button:hover{
