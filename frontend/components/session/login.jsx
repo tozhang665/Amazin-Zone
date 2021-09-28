@@ -44,7 +44,11 @@ class Login extends React.Component {
   render() {
     return (
 
+      <div>
+        <Link className="mainLogo-link"to="/"><img id="main-logo" src={window.main_logo} alt="main logo" /></Link>
+      <br />
       <div id="login-container">
+
 
         <div id="login-session-form">
           <div id="login-title"><h2>Sign-in</h2></div>
@@ -88,7 +92,7 @@ class Login extends React.Component {
 
 
       </div>
-
+      </div>
     );
   }
 }
