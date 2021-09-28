@@ -66,7 +66,6 @@ class Login extends React.Component {
               <button className="button login-button" onClick={this.handleSubmit}>Sign-in</button>
               <br />
 
-
             </form>
 
             <div id = "login-form">
@@ -81,9 +80,13 @@ class Login extends React.Component {
           </div>
           <br />
           {this.renderErrors()}
-          <Link className="button cancel-button" to="/">Cancel Login</Link>
-
+          <Link className="button" id="signup-Link"to="/signup">Create your Amazin Account</Link>
+          <br />
+          <br />
+          <Link className="button" id="cancel-button" to="/">Cancel Login</Link>
         </div>
+
+
       </div>
 
     );

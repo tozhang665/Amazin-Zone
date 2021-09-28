@@ -5,42 +5,48 @@ class Home extends React.Component{
   constructor(props){
     super(props)
   }
+
+  renderRight(currentUser,logout){
+
+    if(currentUser===null){
+      return(
+      <div id="nav-right"  className="nav-div">
+        <Link className="button" to="/login">Sign-in</Link>
+        <Link className="button" to="/signup">Sign-up</Link>
+      </div>
+    )
+    }else{
+      return(
+      <div id="nav-right"  className="nav-div">
+        <button className="button" onClick={()=>logout()}>Log-Out</button>
+      </div>
+    )
+    }
+  }
+
+
   render(){
     let {currentUser,logout} = this.props
-    if (currentUser === null){
       return(
         <header className="home-title">
+
           <div id="navbar">
+
             <div id="nav-belt">
-              <div id="nav-left">
+
+              <div id="nav-left" className="nav-div">
               Amazin'Zone
               </div>
 
-              <div id="nav-fill">
+              <div id="nav-fill"  className="nav-div">
                 <input type="text" />
               </div>
-              <div id="nav-right">
-              <Link className="button" to="/login">Sign-in</Link>
-              <Link className="button" to="/signup">Sign-up</Link>
-              </div>
+
+              {this.renderRight(currentUser,logout)}
             </div>
           </div>
         </header>
       )
-    }else{
-      return(
-        <header className="home-title">
-          <p>
-          Amazin'Zone
-          </p>
-          <div>Hello {currentUser.email}</div>
-          <br />
-          <div>
-          <button className="button" onClick={()=>logout()}>Log-Out</button>
-          </div>
-        </header>
-      )
-    }
   }
 }
 

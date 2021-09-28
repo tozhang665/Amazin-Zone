@@ -31,7 +31,6 @@
 
 #login-form{
   font-size: 13px;
-  margin-left: 15px;
 }
 
 .login-label{
@@ -46,6 +45,8 @@
   // margin-left: auto;
   // margin-right: auto;
   width: 97%;
+  padding: 5px;
+  font-size:10px
 }
 
 .login-button{
@@ -78,4 +79,22 @@ input{
   border-radius: 4px;
   // background-color: #F5F5F5;
   box-shadow: inset 0 3px 4px 0 hsla(0,0%,0%,.08);
+}
+
+
+#signup-Link, #cancel-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  text-align: center;
+  background-color: #EBEBEB;
+}
+
+#signup-Link:hover, #cancel-button:hover{
+  background-color: #CCCCCC;
+}
+
+#signup-Link:active, #cancel-button:active{
+  background-color: #ADADAD;
 }
