@@ -35,7 +35,8 @@ class Home extends React.Component{
             <div id="nav-belt">
 
               <div id="nav-left" className="nav-div">
-              <Link className="mainLogo-link"to="/"><img id="main-logo" src={window.main_logo} alt="main logo" /></Link>
+              {/* <Link className="mainLogo-link"to="/"><img id="main-logo" src={window.main_logo} alt="main logo" /></Link> */}
+              <Link className="logo-link" to="/">Amazin'Zone</Link>
               </div>
 
               <div id="nav-fill"  className="nav-div">

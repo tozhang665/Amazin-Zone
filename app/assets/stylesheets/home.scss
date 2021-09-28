@@ -1,6 +1,6 @@
 #nav-belt{
   display: grid;
-  grid-template-columns: 100px 1fr 200px;
+  grid-template-columns: 150px 1fr 200px;
   background-color: #131921;
   color:white;
   // padding:5px;
@@ -10,12 +10,19 @@
 }
 
 #nav-fill{
-  width: 94%;
+  width: 95%;
 }
 
 #nav-fill>input{
   width: 100%;
   padding: 5px;
+  margin-left: 5%;
+}
+
+#nav-fill>input:focus{
+  border:#f0c14b 4px solid;
+  border-radius: 5px;
+  // border-color: #f0c14b;
 }
 
 #navbar{
@@ -57,4 +64,18 @@
 
 .mainLogo-link{
   height: 3rem;
+}
+
+.logo-link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-link:hover{
+  padding: 15px 10px 15px 10px;
+  border: white 1px solid;
+  border-radius: 5px;
 }
