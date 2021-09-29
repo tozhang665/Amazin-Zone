@@ -1,0 +1,13 @@
+#splash-container{
+  display: flex;
+  justify-content: center;
+  background-color: #EAEDED;
+}
+
+#item-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  background-color: green;
+}

@@ -10,7 +10,7 @@
 class Product < ApplicationRecord
   validates :title, :description, :price, presence: true
 
-  validate :ensure_photo
+  # validate :ensure_photo
 
   has_one_attached :photo
 
@@ -19,5 +19,5 @@ class Product < ApplicationRecord
       errors[:photo] << "must be attached"
     end
   end
-  
+
 end
