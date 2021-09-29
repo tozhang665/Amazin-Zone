@@ -6,6 +6,8 @@ import createStore from "./store/store";
 
 import {login,logout} from "./actions/session"
 
+import {grabProducts} from "./actions/product"
+
 
 document.addEventListener("DOMContentLoaded",()=>{
   const rootEL = document.getElementById("root")
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded",()=>{
   window.dispatch = store.dispatch;
   window.login = login;
   window.logout = logout;
+
+  window.grab = grabProducts
 
   ReactDOM.render(<Root store={store}/>,rootEL)
 })

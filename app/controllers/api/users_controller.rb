@@ -24,6 +24,7 @@ def create
     @user = selected_user
   end
   
+  
   private
   def selected_user
     User.find(params[:id])

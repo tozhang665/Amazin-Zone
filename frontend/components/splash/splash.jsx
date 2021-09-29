@@ -7,19 +7,12 @@ import Item from "./item";
 class Splash extends React.Component{
   constructor(props){
     super(props)
-    this.fetchProducts = this.fetchProducts.bind(this)
-
     this.state = {products: []}
 
-    this.fetchProducts().then(data=>this.setState({products: data}))
+    this.props.grabProducts().then(data=>this.setState({products: this.shuffleArray(data.payload)}))
   }
 
-
-  fetchProducts = () => $.ajax({
-    url: '/api/products',
-    method: 'GET'
-  });
-
+  shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
 
   render(){
     let {products} = this.state;

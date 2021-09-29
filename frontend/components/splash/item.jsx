@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 class Item extends React.Component{
@@ -14,8 +15,6 @@ class Item extends React.Component{
     }
   }
 
-
-
   render(){
     // console.log(this.state);
     return(
@@ -29,7 +28,7 @@ class Item extends React.Component{
         </div>
 
         <div id="item-desc-div">
-          <a href="" id = "item-desc">{this.state.description}</a>
+          <Link to={`/products/${this.state.id}`}>{this.state.description}</Link>
         </div>
       </div>
     )
