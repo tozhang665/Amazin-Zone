@@ -1,5 +1,4 @@
 #item-div{
-  display: inline-flex;
   border: 2px gray solid;
   background-color: white;
 
@@ -10,4 +9,30 @@
   
   height: 385px;
   width:350px;
+}
+
+#item-title{
+  // width: 100%;
+  // text-align: left;
+  margin-left: 10px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0F1111;
+}
+#item-img-div{
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#item-img{
+  height: 270px;
+  width: 290px;
+
+}
+
+#item-div-desc{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

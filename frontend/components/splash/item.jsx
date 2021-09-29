@@ -20,7 +20,17 @@ class Item extends React.Component{
     console.log(this.state);
     return(
       <div id = "item-div">
-        {this.state.title}
+        <div id="item-title">
+          {this.state.title}
+        </div>
+        <br />
+        <div id="item-img-div">
+          <img id="item-img"src={this.state.photoUrl} alt="" />
+        </div>
+
+        <div id="item-div-desc">
+          <a href="">{this.state.description}</a>
+        </div>
       </div>
     )
   }

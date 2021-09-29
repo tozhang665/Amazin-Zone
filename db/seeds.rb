@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+require 'open-uri'
+
+
+
 user = User.new({password:"demopassword",email:"demo.io"})
 user1 = User.new({password:"alpha",email:"alpha.io"})
 user2 = User.new({password:"bravo",email:"bravo.io"})
@@ -22,10 +26,6 @@ user3.save!
 user4.save!
 user5.save!
 user6.save!
-
-
-
-require 'open-uri'
 
 
 
