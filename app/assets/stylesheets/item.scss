@@ -7,8 +7,10 @@
   padding: 10px;
   
   
-  height: 385px;
-  width:350px;
+  // height: 385px;
+  // width:350px;
+  height: 20vh;
+  width: 80%;
 }
 
 #item-title{
@@ -24,24 +26,26 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  height: 60%;
+  width: 80%;
 }
 
 #item-img{
-  height: 270px;
-  width: 290px;
+  height: 100%;
+  width: 100%;
 
 }
 
 #item-desc-div{
-  height: 10px;
+  height: 16px;
   margin: 10px 15px 10px 15px;
-  // overflow: hidden;
+  overflow: hidden;
   // text-overflow: ellipsis;
   // text-decoration: none;
 }
 
 #item-desc{
-   overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
 }
