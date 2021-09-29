@@ -32,7 +32,16 @@
 
 }
 
-#item-div-desc{
-  overflow: hidden;
+#item-desc-div{
+  height: 10px;
+  margin: 10px 15px 10px 15px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // text-decoration: none;
+}
+
+#item-desc{
+   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
 }
