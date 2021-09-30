@@ -2,19 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#product-show-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
 #show-to-product-container{
   // background-color: lightblue;
-  display: flex;
-  justify-content: center;
+
 }
 
 #product-container{
   // background-color: lightcoral;
   display: grid;
   grid-template-columns: 2fr 2fr 1fr;
-
-  width: 60%;
-
 
   padding-top: 70px;
 }
@@ -174,7 +178,20 @@
 }
 
 
+#show-horizontal-rule{
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid #d2d2d2;
+  width: 100%;
+  line-height: 19px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
 
 strong{
   font-weight: bolder;
 }
+

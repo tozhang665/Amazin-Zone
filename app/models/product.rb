@@ -12,7 +12,13 @@ class Product < ApplicationRecord
 
   # validate :ensure_photo
 
+  has_many :reviews,
+    primary_key: :id,
+    foreign_key: :product_id,
+    class_name: :Review
+
   has_one_attached :photo
+
 
   def ensure_photo
     unless self.photo.attached?

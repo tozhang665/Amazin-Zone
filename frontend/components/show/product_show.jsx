@@ -1,6 +1,7 @@
 import React from "react";
 import NavContainer from "../nav/nav_container"
 import ProductItem from "./product_item";
+import ReviewContainer from "../reviews/reviews_container";
 
 
 
@@ -29,8 +30,18 @@ class ProductShow extends React.Component{
       return(
         <div>
           <NavContainer/>
-          <div id="show-to-product-container">
-            <ProductItem price={price} title={title} description={description} photoUrl={photoUrl}/>
+          <div id="product-show-container">
+            <div id="show-to-product-container">
+              <ProductItem price={price} title={title} description={description} photoUrl={photoUrl}/>
+            </div>
+
+            <hr id="show-horizontal-rule"/>
+            <div id="product-show-review-container">
+              <div id="">
+                Reviews
+              </div>
+              <ReviewContainer itemId={this.props.itemId}/>
+            </div>
           </div>
         </div>
       ) 

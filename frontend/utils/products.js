@@ -7,3 +7,8 @@ export const fetchProduct = (id) => $.ajax({
   url: `/api/products/${id}`,
   method:'GET'
 })
+
+export const fetchReviews = (id) => $.ajax({
+  url: `/api/products/${id}/reviews`,
+  method:'GET'
+})
