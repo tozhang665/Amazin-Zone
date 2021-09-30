@@ -14,7 +14,7 @@ class Review extends React.Component{
   }
   
   render(){
-    console.log(this.state)
+
     return(
       <div>
         {this.state.reviews.map((ele,idx)=>

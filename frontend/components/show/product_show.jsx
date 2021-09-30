@@ -46,7 +46,6 @@ class ProductShow extends React.Component{
         </div>
       ) 
     }
-    
   }
 }
 

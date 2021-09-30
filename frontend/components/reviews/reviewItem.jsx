@@ -25,8 +25,6 @@ class ReviewItem extends React.Component{
 
   render(){
     let {id,userId,title,body,rating,reviewer} = this.state
-    // console.log(userId)
-    console.log(reviewer)
     return(
       <div>
         id
