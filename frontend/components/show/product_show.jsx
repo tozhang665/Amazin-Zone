@@ -1,5 +1,6 @@
 import React from "react";
 import NavContainer from "../nav/nav_container"
+import ProductItem from "./product_item";
 
 
 
@@ -28,16 +29,8 @@ class ProductShow extends React.Component{
       return(
         <div>
           <NavContainer/>
-          <div>
-            {title}
-          </div>
-          <div>
-            {description}
-          </div>
-          {price}
-          <div>
-            <img src={photoUrl} alt="" />
-            
+          <div id="show-to-product-container">
+            <ProductItem price={price} title={title} description={description} photoUrl={photoUrl}/>
           </div>
         </div>
       ) 

@@ -1,3 +1,77 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#show-to-product-container{
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+#product-container{
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+
+  background-color: lightcoral;
+  width: 60%;
+
+
+  padding-top: 70px;
+}
+
+#product-img-container{
+  background-color: lightgray;
+  padding: 10px;
+}
+
+#product-img{
+  width: 100%;
+  height: auto;
+}
+
+
+#product-body-container{
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+#product-body-title{
+  font-size: 28px;
+  font-weight: 400;
+  background-color: lightseagreen;
+}
+
+#product-body-price{
+  background-color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#product-body-price-label{
+  margin-top: 0px;
+  margin: 3px;
+}
+
+#product-body-price-cost{
+  color:#B12704;
+  font-size: 18px;
+  line-height: 24px!important;
+  margin: 3px;
+}
+#product-body-price-cost-symbol{
+  margin: 3px;
+}
+
+#product-body-price-cost-text{
+  margin: 3px;
+}
+#product-body-description{
+  font-size: 20px;
+  background-color: lightyellow;
+}
+
+
+#product-purchase-container{
+  background-color: lightcyan;
+}
