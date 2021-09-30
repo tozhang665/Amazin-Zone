@@ -37,7 +37,7 @@ class ProductShow extends React.Component{
 
             <hr id="show-horizontal-rule"/>
             <div id="product-show-review-container">
-              <div id="">
+              <div id="product-show-review-text">
                 Reviews
               </div>
               <ReviewContainer itemId={this.props.itemId}/>

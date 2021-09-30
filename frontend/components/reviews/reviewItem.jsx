@@ -26,25 +26,32 @@ class ReviewItem extends React.Component{
   render(){
     let {id,userId,title,body,rating,reviewer} = this.state
     return(
-      <div>
-        id
-        {userId}
-        <br />
-        reviewer
-        {reviewer}
-        <br />
-        title
-        {title}
-        <br />
-        body
-        {body}
-        <br />
-        rating
-        {rating}
-        <br />
-        <br />
-        <br />
-        <br />
+      <div id="review-item-container">
+
+
+        <div id="review-item-reviewer">
+          {reviewer}
+        </div>
+
+
+        <div id="review-item-rating-title">
+
+
+          <div id="review-item-rating">
+            rating: {rating}
+          </div>
+
+
+          <div id="review-item-title">
+            {title}
+          </div>
+
+
+        </div>
+
+        <div id="review-item-body">
+          {body}
+        </div>
       </div>
     )
   }
