@@ -16,8 +16,6 @@ class productItem extends React.Component{
     }
   }
   render(){
-    // let today = new Date().toLocaleDateString()
-    // let newDate = datefns.addDays(today,5)
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
     ];
@@ -29,15 +27,6 @@ class productItem extends React.Component{
     let longDay = longDelivery.getDate()
     let shortMonth = monthNames[shortDelivery.getMonth()]
     let shortDay = shortDelivery.getDate()
-  
-    // console.log("SHORT")
-    // console.log(shortMonth)
-    // console.log(shortDay)
-
-    // console.log("LONG")
-    // console.log(longMonth)
-    // console.log(longDay)
-    
 
 
     let {title,price,description,photoUrl} = this.state
