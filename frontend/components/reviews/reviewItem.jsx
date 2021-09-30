@@ -1,4 +1,5 @@
 import React from "react";
+import StaticRating from "./rating";
 
 
 class ReviewItem extends React.Component{
@@ -25,6 +26,7 @@ class ReviewItem extends React.Component{
 
   render(){
     let {id,userId,title,body,rating,reviewer} = this.state
+    // console.log(this.props.item)
     return(
       <div id="review-item-container">
 
@@ -38,7 +40,7 @@ class ReviewItem extends React.Component{
 
 
           <div id="review-item-rating">
-            rating: {rating}
+            <StaticRating rating={rating} createdAt={this.props.item.createdAt}/>
           </div>
 
 

@@ -1,40 +1,48 @@
 import React from 'react'
 
+
 const StaticRating = props => {
 
     let {rating} = props
 
     rating = Math.floor(rating)
-    let kelpFilled = (
-        <div id='filled'>
-            <img id='small' src={window.logo} width='10' height='10'/>
+    let starFilled = (
+        <div className="rating-star"id='filled'>
+            <img src={window.filled_star}/>
         </div> 
     )
-    let kelpUnfilled = (
-        <div id='unfilled'>
-            <img id='small' src={window.logo} width='10' height='10'/> 
+    let starUnfilled = (
+        <div className="rating-star"id='unfilled'>
+            <img src={window.unfilled_star}/> 
         </div>
     )
+    
     let ratingContent = []
     for(let i = 0; i < rating; i++){
-        ratingContent.push(kelpFilled)
+        ratingContent.push(starFilled)
     }
     for(let i= 0; i < 5 - rating; i++){
-        ratingContent.push(kelpUnfilled)
+        ratingContent.push(starUnfilled)
     }
+    // console.log(ratingContent)
+    // let created = ""
+    // if (props.createdAt !== undefined){
+    //     let date = new Date(props.createdAt)
+    //     let month = date.getMonth()
+    //     let day = date.getDay()
+    //     let year = date.getFullYear()
+    //     created = <p id='created'>{month}/{day}/{year}</p>
+    // }
+    let created = new Date(props.createdAt).toLocaleDateString("en-US")
 
-    let created = ""
-    if (props.createdAt !== undefined){
-        let date = new Date(props.createdAt)
-        let month = date.getMonth()
-        let day = date.getDay()
-        let year = date.getFullYear()
-        created = <p id='created'>{month}/{day}/{year}</p>
-    }
     return (
-    <div id='rating-bar'>
-        {ratingContent.map((rating,i) => <div className='outer' key={i}>{rating}</div>)}
-        {created}
+    <div id='rating-container'>
+      <div id='rating-bar'>
+        {ratingContent.map((rating,i) => <div className='rating-wrapper-container' key={i}>{rating}</div>)}
+      </div>
+      <div>
+        created on: {created}
+      </div>
     </div>
     )
 }
