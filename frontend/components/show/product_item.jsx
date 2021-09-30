@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import { add } from 'date-fns'
 
 
 class productItem extends React.Component{
@@ -15,6 +16,30 @@ class productItem extends React.Component{
     }
   }
   render(){
+    // let today = new Date().toLocaleDateString()
+    // let newDate = datefns.addDays(today,5)
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+    ];
+
+    let today = new Date()
+    let shortDelivery = add(today,{days:3})
+    let longDelivery = add(today,{weeks:1})
+    let longMonth = monthNames[longDelivery.getMonth()]
+    let longDay = longDelivery.getDate()
+    let shortMonth = monthNames[shortDelivery.getMonth()]
+    let shortDay = shortDelivery.getDate()
+  
+    // console.log("SHORT")
+    // console.log(shortMonth)
+    // console.log(shortDay)
+
+    // console.log("LONG")
+    // console.log(longMonth)
+    // console.log(longDay)
+    
+
+
     let {title,price,description,photoUrl} = this.state
     return(
     <div id="product-container">
@@ -65,11 +90,25 @@ class productItem extends React.Component{
       <div id="product-purchase-container">
         <div id="product-purchase-border">
           <p id="product-body-price-cost"> ${price} </p>
-          <div id="product-body-price-cost-symbol"> & </div>
-          <div id="product-body-price-cost-text">Free returns</div>
-          <br />
-          <br />
-          button to add to card
+          <div id="product-purchase-shipping-description">
+            <div id="product-purchase-shipping-description-long">
+              <div><div id="product-purchase-shipping-description-free-delivery">FREE delivery </div><strong>{longMonth} {longDay}</strong></div>  
+            </div>
+            
+            <div id="product-purchase-shipping-description-short">
+            <p>Or fastest delivery <strong>{shortMonth} {shortDay}</strong>. Order within 1hr 40 mins</p>
+            </div>
+
+            <div id="product-purchase-button-container">
+              <button className="product-purchase-button" id="product-purchase-cart-button">Add To Cart</button>
+            </div>
+
+            <div id="product-purchase-button-container">
+              <button className="product-purchase-button" id="product-purchase-buy-button">Buy Now</button>
+            </div>
+
+
+          </div>
 
         </div>
       </div>
