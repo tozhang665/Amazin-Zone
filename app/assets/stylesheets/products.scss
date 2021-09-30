@@ -72,6 +72,30 @@
 }
 
 
+#product-body-description-ul{
+  text-decoration: none;
+  list-style: inside;
+  font-size: 16px;
+}
+
+#product-body-description-li{
+  margin: 5px;
+}
+
+
+
 #product-purchase-container{
-  background-color: lightcyan;
+  // background-color: lightcyan;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-purchase-border{
+  height: 90%;
+  width: 90%;
+  border-radius: 8px;
+  border: 1px #ddd solid;
+  padding: 10px;
 }
