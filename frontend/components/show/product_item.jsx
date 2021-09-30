@@ -50,10 +50,11 @@ class productItem extends React.Component{
         </div>
         <br />
         <div id="product-body-description">
-          <div>
+          <div id="product-body-description-title">
             About this item:
           </div>
           <ul id="product-body-description-ul">
+
             <li id="product-body-description-li">
               {description}
             </li>
@@ -61,15 +62,19 @@ class productItem extends React.Component{
             <li id="product-body-description-li">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             </li>
+
             <li id="product-body-description-li">
               At sit nesciunt ipsa laudantium corporis maiores, commodi numquam cupiditate exercitationem 
             </li>
+
             <li id="product-body-description-li">
               quas magni nulla explicabo id sint temporibus, neque veritatis consequuntur enim beatae quaerat ipsum sunt. Iure excepturi nobis placeat,
             </li>
+
             <li id="product-body-description-li">
               eligendi omnis cum aperiam deserunt sit tempora facilis a vel hic eius.
             </li>
+
           </ul>
         </div>
         <br />

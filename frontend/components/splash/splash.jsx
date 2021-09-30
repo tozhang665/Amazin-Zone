@@ -22,6 +22,9 @@ class Splash extends React.Component{
 
         <div id="splash-container">
             <div id= "item-container">
+              <div id="gradient">
+
+              </div>
               {products.map((ele,idx)=>{
                 return(<Item key={idx} product={ele}/>)
               })}

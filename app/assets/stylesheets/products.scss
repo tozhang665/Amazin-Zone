@@ -37,8 +37,9 @@
 
 #product-body-title{
   // background-color: lightseagreen;
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 #product-body-price{
@@ -71,6 +72,10 @@
   font-size: 20px;
 }
 
+#product-body-description-title{
+  font-weight: 600;
+}
+
 
 #product-body-description-ul{
   text-decoration: none;
@@ -80,6 +85,7 @@
 
 #product-body-description-li{
   margin: 5px;
+  line-height: 1.5rem;
 }
 
 
@@ -146,6 +152,7 @@
 
 #product-purchase-cart-button:hover{
   background-color: #F7CA00;
+  cursor: pointer;
 }
 
 #product-purchase-cart-button:active{
@@ -159,6 +166,7 @@
 
 #product-purchase-buy-button:hover{
   background-color: #FA8900;
+  cursor: pointer;
 }
 
 #product-purchase-buy-button:active{

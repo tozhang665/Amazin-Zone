@@ -16,8 +16,17 @@ class Nav extends React.Component{
       </div>
     )
     }else{
+      console.log(currentUser)
       return(
       <div id="nav-right"  className="nav-div">
+        {/* <div id="nav-right-current-user-container">
+          <div>
+            Hello 
+          </div>
+          <div id="nav-right-current-user-email">
+            {currentUser.email}
+          </div>
+        </div> */}
         <button className="button" onClick={()=>logout()}>Log-Out</button>
       </div>
     )
