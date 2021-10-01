@@ -20,9 +20,10 @@ class Login extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state)
-      .then(() => this.props.history.push('/'));
+      .then(() => this.props.history.goBack());
   }
-
+  
+  // this.props.history.push('/')
 
 
    renderErrors() {
@@ -77,7 +78,7 @@ class Login extends React.Component {
             <div id = "login-form">
               <button className="button demo-button" onClick={()=>{
                 let demoUser = {email:"demo.io",password:"demopassword"}
-                this.props.login(demoUser).then(() => this.props.history.push('/'))
+                this.props.login(demoUser).then(() => this.props.history.goBack())
                 }
               }
               >Demo-Login</button>
