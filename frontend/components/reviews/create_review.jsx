@@ -55,23 +55,30 @@ class CreateReview extends React.Component{
     return(
       <div>
         <NavContainer/>
-          <form action="">
 
-          <label> Title:
-          <input type="text" value={this.state.title} onChange={this.handleInput('title')}/>
-          </label>
+        <div id="create-review-container">
+          <div id="create-review-inner-container">
+            <form>
 
+            <label className="create-review-label-styling"> Add a headline
+            <br />
+            <input type="text" value={this.state.title} onChange={this.handleInput('title')}/>
+            </label>
+            <br />
+            <label className="create-review-label-styling"> Rating
+            <input type="number" min="0" max="5" value={this.state.rating} onChange={this.handleInput('rating')}/>
+            </label>
+            <br />
+            <label> Add a written review
+              <br />
+              <textarea id="create-review-written-review"onChange={this.handleInput('body')} placeholder="What did you like or dislike? What did you use this product for?"></textarea>
 
-          <label> body:
-          <input type="text" value={this.state.body} onChange={this.handleInput('body')}/>
-          </label>
-
-          <label> rating:
-          <input type="number" min="0" max="5" value={this.state.rating} onChange={this.handleInput('rating')}/>
-          </label>
-
-          <button className="button login-button" onClick={this.handlePost}>Post</button>
-          </form>
+            </label>
+            <br />
+            <button className="button login-button" onClick={this.handlePost}>Post</button>
+            </form>
+          </div>
+        </div>
       </div>
       )
   }

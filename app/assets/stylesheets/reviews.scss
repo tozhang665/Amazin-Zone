@@ -42,3 +42,34 @@
   font-size: 16px;
   margin-left: 20px;
 }
+
+
+
+#create-review-container{
+  display: flex;
+  justify-content: center;
+}
+
+#create-review-inner-container{
+  width: 30vw;
+}
+.create-review-label-styling{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#create-review-title-label{
+}
+
+
+.create-review-label-styling > input{
+  width: 100%;
+  margin: 5px;
+}
+
+
+#create-review-written-review{
+  height: 100px;
+  width: 100%;
+  font-family: "Amazon Ember",Arial,sans-serif;
+}
