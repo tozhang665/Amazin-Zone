@@ -127,9 +127,59 @@ review6 = Review.new({
   rating:5
 })
 
+
+
+
+review7 = Review.new({
+  user_id:5, 
+  product_id:3,
+  title:"Really lights up the way", 
+  body:"Really lights things up. Almost as good as I do.",
+  rating:5
+})
+
+review8 = Review.new({
+  user_id:1, 
+  product_id:3,
+  title:"Great product", 
+  body:"A little too bright for me but it gets the job done",
+  rating:4
+})
+
+review9 = Review.new({
+  user_id:2, 
+  product_id:3,
+  title:"Not even that bright", 
+  body:"Barely lit up my backyard. It could've been way brighter",
+  rating:2
+})
+
+review10 = Review.new({
+  user_id:1, 
+  product_id:4,
+  title:"Great for any occasion", 
+  body:"Has a little bit of everything so I knew exactly who to give it to",
+  rating:4
+})
+
+review11 = Review.new({
+  user_id:3, 
+  product_id:8,
+  title:"Helped protect my house", 
+  body:"By putting this on my house, it helped me keep my house more modern",
+  rating:5
+})
+
+
+
+
 review1.save!
 review2.save!
 review3.save!
 review4.save!
 review5.save!
 review6.save!
+review7.save!
+review8.save!
+review9.save!
+review10.save!
