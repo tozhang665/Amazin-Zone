@@ -25,9 +25,9 @@ class Splash extends React.Component{
               <div id="gradient">
 
               </div>
-              {products.map((ele,idx)=>{
-                return(<Item key={idx} product={ele}/>)
-              })}
+                {products.map((ele,idx)=>{
+                  return(<Item key={idx} product={ele}/>)
+                })}
             </div>
         </div>
       </div>

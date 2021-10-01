@@ -162,6 +162,7 @@ review10 = Review.new({
   rating:4
 })
 
+
 review11 = Review.new({
   user_id:3, 
   product_id:8,
@@ -183,3 +184,4 @@ review7.save!
 review8.save!
 review9.save!
 review10.save!
+review11.save!
