@@ -4,7 +4,8 @@ import { resetErrors } from "../../actions/session";
 
 const mapStateToProp = (state,ownProps) => ({
   currentUser: state.session.currentUser.id,
-  currentProduct: ownProps.match.params.product_id
+  currentProduct: ownProps.match.params.product_id,
+  sessionErrors: state.errors.sessionErrors
 })
 
 const mapDispatchToProp = dispatch =>({

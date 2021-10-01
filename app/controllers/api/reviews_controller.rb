@@ -9,12 +9,11 @@ class Api::ReviewsController < ApplicationController
   def create
     review = Review.new(review_params)
     review.product_id = params[:product_id]
-    puts review.product_id
     if review.save
       render json: review
     else
       puts review.errors.full_messages
-      render json: review.errors.full_messages,status:422
+      render json: ["something went wrong"],status:401
     end
 
   end

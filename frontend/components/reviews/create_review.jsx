@@ -49,7 +49,6 @@ class CreateReview extends React.Component{
     this.props.resetErrors();
   }
 
-
   render(){
     console.log(this.state)
     return(
@@ -57,6 +56,7 @@ class CreateReview extends React.Component{
         <NavContainer/>
 
         <div id="create-review-container">
+
           <div id="create-review-inner-container">
             <form>
 
@@ -69,13 +69,13 @@ class CreateReview extends React.Component{
             <input type="number" min="0" max="5" value={this.state.rating} onChange={this.handleInput('rating')}/>
             </label>
             <br />
-            <label> Add a written review
+            <label className="create-review-label-styling"> Add a written review
               <br />
               <textarea id="create-review-written-review"onChange={this.handleInput('body')} placeholder="What did you like or dislike? What did you use this product for?"></textarea>
 
             </label>
             <br />
-            <button className="button login-button" onClick={this.handlePost}>Post</button>
+            <button className="button login-button" onClick={this.handlePost}>Add Review</button>
             </form>
           </div>
         </div>
