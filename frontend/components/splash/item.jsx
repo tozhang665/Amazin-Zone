@@ -19,10 +19,11 @@ class Item extends React.Component{
     // console.log(this.state);
     return(
       <div id = "item-div">
+
         <div id="item-title">
           {this.state.title}
         </div>
-        <br />
+
         
         <div id="item-img-div">
           <img id="item-img"src={this.state.photoUrl} alt="" />
@@ -31,6 +32,8 @@ class Item extends React.Component{
         <div id="item-desc-div">
           <Link to={`/products/${this.state.id}`} id="item-desc-link">{this.state.description}</Link>
         </div>
+         
+
       </div>
     )
   }

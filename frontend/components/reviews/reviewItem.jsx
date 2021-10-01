@@ -54,6 +54,7 @@ class ReviewItem extends React.Component{
         <div id="review-item-body">
           {body}
         </div>
+        <hr id="show-horizontal-rule"/>
       </div>
     )
   }
