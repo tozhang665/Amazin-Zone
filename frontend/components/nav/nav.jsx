@@ -16,7 +16,6 @@ class Nav extends React.Component{
       </div>
     )
     }else{
-      console.log(currentUser)
       return(
       <div id="nav-right"  className="nav-div">
         {/* <div id="nav-right-current-user-container">

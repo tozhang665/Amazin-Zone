@@ -3,6 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+#product-show-review-statistics-container{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+
+
+
 #review-item-container{
   font-size: 18px;
   padding: 30px;

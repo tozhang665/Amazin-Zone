@@ -2,6 +2,7 @@ import React from "react";
 import NavContainer from "../nav/nav_container"
 import ProductItem from "./product_item";
 import ReviewContainer from "../reviews/reviews_container";
+import { Link } from "react-router-dom";
 
 
 
@@ -36,11 +37,21 @@ class ProductShow extends React.Component{
             </div>
 
             <hr id="show-horizontal-rule"/>
-            <div id="product-show-review-container">
-              <div id="product-show-review-text">
-                Reviews
-              </div>
-              <ReviewContainer itemId={this.props.itemId}/>
+
+            <div id="product-show-review-statistics-container">
+                <div id="product-show-statistics">
+                  hi
+                  <Link to= {`/createReview/${this.props.itemId}`}>Create a Review</Link>
+                </div>
+
+
+                <div id="product-show-review-container">
+                  <div id="product-show-review-text">
+                    Reviews
+                  </div>
+                  <ReviewContainer itemId={this.props.itemId}/>
+                </div>
+
             </div>
           </div>
         </div>

@@ -18,7 +18,9 @@ class Splash extends React.Component{
     let {products} = this.state;
     return(
       <div>
-        <NavContainer/>
+        <div>
+         <NavContainer/>
+        </div>
 
         <div id="splash-container">
             <div id= "item-container">
