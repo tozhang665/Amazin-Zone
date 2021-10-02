@@ -16,6 +16,7 @@ class Splash extends React.Component{
 
   render(){
     let {products} = this.state;
+    let selectedProducts = products.slice(0,8)
     return(
       <div>
         <div>
@@ -23,18 +24,24 @@ class Splash extends React.Component{
         </div>
 
         <div id="splash-container">
-            <div id= "item-container">
-              <div id="gradient">
-
-              </div>
-                {products.map((ele,idx)=>{
-                  return(<Item key={idx} product={ele}/>)
-                })}
+          <div id="main_splash_container">
+            <img id="main_splash_logo" src={window.main_splash} alt="main_logo" />
+            <div id="gradient">
             </div>
+          </div>
+            <div id= "item-container">
+                {selectedProducts.map((ele,idx)=>{
+                  return(<Item key={idx} product={ele}/>)
+                })}                 
+            </div> 
+
         </div>
+
       </div>
     )
   }
 }
+
+
 
 export default Splash
