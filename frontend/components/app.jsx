@@ -9,7 +9,7 @@ import { Switch } from 'react-router';
 import SplashContainer from "./splash/splash_container";
 import ProductShowContainer from "./show/product_show_container";
 import CreateReviewContainer from './reviews/create_review_container';
-
+import EditReviewContainer from './reviews/edit_review_container';
 
 export default () => (
   <div>
@@ -17,6 +17,7 @@ export default () => (
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <AuthRoute exact path="/login" component={LoginContainer} />
       <ProtectedRoute exact path="/createReview/:product_id" component={CreateReviewContainer}/>
+      <ProtectedRoute exact path="/editReview/:review_id" component={EditReviewContainer}/>
       <Route exact path ="/products/:id" component={ProductShowContainer}/>
       <Route exact path="/" component={SplashContainer} />
     </Switch>

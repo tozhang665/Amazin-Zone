@@ -14,11 +14,11 @@ class Review extends React.Component{
   }
   
   render(){
-
+    // console.log(this.props.currentUser)
     return(
       <div>
         {this.state.reviews.map((ele,idx)=>
-          <ReviewItem key={idx} item={ele}/>
+          <ReviewItem key={idx} item={ele} currentUser={this.props.currentUser}/>
         )}
       </div>
     )

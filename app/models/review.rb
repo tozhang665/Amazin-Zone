@@ -28,13 +28,3 @@ class Review < ApplicationRecord
 
 
 end
-
-
-# user = User.new({password:"demopassword",email:"demo.io"})
-# user1 = User.new({password:"passwordd",email:"TheManHimself@gmail.com"})
-# user2 = User.new({password:"passwordd",email:"JeffBezos@amazon.com"})
-# user3 = User.new({password:"passwordd",email:"ElonMusk@tesla.com"})
-# user4 = User.new({password:"passwordd",email:"Jesus@heaven.com"})
-# user5 = User.new({password:"passwordd",email:"Cthulhu@myths.com"})
-# user6 = User.new({password:"passwordd",email:"Dormammu@marvel.com"})
-# user7 = User.new({password:"passwordd",email:"ChuckNoris@TexasRanger.com"})

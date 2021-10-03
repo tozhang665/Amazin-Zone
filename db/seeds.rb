@@ -147,7 +147,7 @@ review8 = Review.new({
 })
 
 review9 = Review.new({
-  user_id:2, 
+  user_id:1, 
   product_id:3,
   title:"Not even that bright", 
   body:"Barely lit up my backyard. It could've been way brighter",

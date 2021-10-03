@@ -3,3 +3,13 @@ export const postReview = (productId,review) => $.ajax({
     method: 'POST',
     data: {review},
   });
+
+
+  export const getReview = (reviewId) => $.ajax({
+    url: `/api/reviews/${reviewId}`,
+    method: 'GET'
+  });
+
+
+
+  

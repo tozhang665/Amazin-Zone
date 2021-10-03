@@ -1,5 +1,6 @@
 import React from "react";
 import StaticRating from "./rating";
+import { Link } from "react-router-dom";
 
 
 class ReviewItem extends React.Component{
@@ -15,8 +16,31 @@ class ReviewItem extends React.Component{
       reviewer:""
     }
     this.fetchUser(this.state.userId)
+
+    this.checkCurrentUser = this.checkCurrentUser.bind(this)
   }
 
+  checkCurrentUser(){
+    // console.log("grabbing")
+    // console.log(this.props.currentUser.id)
+    // console.log(this.state.userId)
+    // console.log(parseInt(this.props.currentUser.id) === this.state.userId)
+    if(this.props.currentUser){
+      if(parseInt(this.props.currentUser.id) === this.state.userId){
+      return(
+        <div>
+          <Link to={`/editReview/${this.state.id}`} className="button">Edit Review</Link>
+        </div>
+      )
+    }
+    }
+    else{
+      return(
+        <div>
+        </div>
+      )
+    }
+  }
 
   fetchUser(id){
     $.ajax({
@@ -26,13 +50,17 @@ class ReviewItem extends React.Component{
 
   render(){
     let {id,userId,title,body,rating,reviewer} = this.state
+    // console.log(this.props.currentUser)
     // console.log(this.props.item)
+    // console.log(this.props.item)
+    let buttonDiv = this.checkCurrentUser()
     return(
       <div id="review-item-container">
 
 
         <div id="review-item-reviewer">
           {reviewer}
+          {buttonDiv}
         </div>
 
 
