@@ -11,7 +11,7 @@ class CreateReview extends React.Component{
     this.state = {
       title:"",
       body:"",
-      rating:0,
+      rating:1,
       user_id: this.props.currentUser
     }
 
@@ -28,7 +28,7 @@ class CreateReview extends React.Component{
 
 
   handlePost(){
-    postReview(this.props.currentProduct,this.state).then(()=>this.props.history.push(`/products/${this.props.currentProduct}`))
+    postReview(this.props.currentProduct,this.state).then(()=>this.props.history.goBack())
   }
 
 

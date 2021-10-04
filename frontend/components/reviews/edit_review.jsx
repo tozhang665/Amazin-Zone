@@ -81,7 +81,7 @@ class EditReview extends React.Component{
             </label>
             <br />
             <label className="create-review-label-styling"> Rating
-            <input type="number" min="0" max="5" value={this.state.rating} onChange={this.handleInput('rating')}/>
+            <input type="number" min="1" max="5" value={this.state.rating} onChange={this.handleInput('rating')}/>
             </label>
             <br />
             <label className="create-review-label-styling"> Add a written review
