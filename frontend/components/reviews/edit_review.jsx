@@ -1,6 +1,6 @@
 import React from "react";
 import NavContainer from "../nav/nav_container"
-import { getReview } from "../../utils/reviews";
+import { getReview,editReview,deleteReview } from "../../utils/reviews";
 
 
 class EditReview extends React.Component{
@@ -17,13 +17,19 @@ class EditReview extends React.Component{
     }
 
     getReview(parseInt(this.props.currentReview)).then((data)=>{
-      this.setState({id:data.id})
+      this.setState({id: parseInt(data.id)})
       this.setState({title:data.title})
       this.setState({body:data.body})
-      this.setState({rating:data.rating})
+      this.setState({rating:parseInt(data.rating)})
       // this.setState({review:data})
       }
     )
+
+
+
+
+    this.handlePost = this.handlePost.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
 
@@ -32,6 +38,15 @@ class EditReview extends React.Component{
     return (e) => {
       this.setState({ [type]: e.target.value });
     };
+  }
+
+  handlePost(){
+   console.log(this.state.id)
+    editReview(parseInt(this.state.id),this.state).then(()=>this.props.history.goBack())
+  }
+
+  handleDelete(){
+    deleteReview(parseInt(this.state.id)).then(()=>this.props.history.goBack())
   }
 
 
@@ -50,10 +65,6 @@ class EditReview extends React.Component{
 
 
   render(){
-    // console.log("PROP")
-    // console.log(this.props)
-    console.log("STATE")
-    console.log(this.state)
     return(
       <div>
         <div>
@@ -79,7 +90,8 @@ class EditReview extends React.Component{
 
             </label>
             <br />
-            <button className="button login-button">Add Review</button>
+            <button className="button login-button" onClick={this.handlePost}>Edit Review</button>
+            <button className="button login-button" onClick={this.handleDelete}>Delete Review</button>
             </form>
           </div>
         </div>

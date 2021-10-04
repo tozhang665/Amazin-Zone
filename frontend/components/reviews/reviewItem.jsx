@@ -28,8 +28,8 @@ class ReviewItem extends React.Component{
     if(this.props.currentUser){
       if(parseInt(this.props.currentUser.id) === this.state.userId){
       return(
-        <div>
-          <Link to={`/editReview/${this.state.id}`} className="button">Edit Review</Link>
+        <div id="review-item-edit-button">
+          <Link to={`/editReview/${this.state.id}`} className="button" id="review-item-edit-button">Edit Review</Link>
         </div>
       )
     }

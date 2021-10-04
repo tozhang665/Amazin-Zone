@@ -11,5 +11,16 @@ export const postReview = (productId,review) => $.ajax({
   });
 
 
+  export const editReview = (reviewId,review) => $.ajax({
+    url: `/api/reviews/${reviewId}`,
+    method:"PATCH",
+    data:{review}
+  })
+
+
+  export const deleteReview = (reviewId) => $.ajax({
+    url: `/api/reviews/${reviewId}`,
+    method:"DELETE"
+  })
 
   
