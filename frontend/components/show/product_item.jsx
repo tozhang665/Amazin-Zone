@@ -27,20 +27,20 @@ class productItem extends React.Component{
     
     if(this.props.currentUser){
       addToCart(this.props.currentUser.id, this.props.product.id)
-      // console.log(this.props.product.id)
-      console.log(this.props)
-      // this.props.history.push(`/products/${this.props.product.id}`)
-      // history.go(0)
-      // console.log(history)
-
-      console.log(this.props)
-
-
-    }else{
-      console.log("logged out")
+      
+      window.location.reload(false)
+      
+      
     }
   }
+  
+  // console.log(this.props.product.id)
+  // console.log(this.props)
+  // this.props.history.push(`/products/${this.props.product.id}`)
+  // history.go(0)
+  // console.log(history)
 
+  // console.log(this.props)
 
   render(){
     console.log(this.props)

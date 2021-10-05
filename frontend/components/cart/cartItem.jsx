@@ -10,7 +10,7 @@ class CartItem extends React.Component{
   }
 
   handleDelete(id){
-    deleteItemFromCart(id).then(()=><Redirect to='/cart'/>)
+    deleteItemFromCart(id).then(()=>window.location.reload(false))
   }
 
   render(){
