@@ -1,13 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { fetchCart } from "../../utils/cart";
+
 
 class Nav extends React.Component{
   constructor(props){
     super(props)
+
+    this.state = {
+      items:{
+        cart:[],
+        product:[]
+      }
+    }
+
+    if(this.props.currentUser){
+      fetchCart(this.props.currentUser.id).then(data=> this.setState({items:data}))
+    }
   }
 
   renderRight(currentUser,logout){
-
     if(currentUser===null){
       return(
       <div id="nav-right"  className="nav-div">
@@ -26,6 +38,10 @@ class Nav extends React.Component{
             {currentUser.email}
           </div>
         </div> */}
+        <div>
+        <Link to="/cart" id="tempIDForCart">{(this.state.items.cart).length}</Link>
+        
+        </div>
         <button className="button" onClick={()=>logout()}>Log-Out</button>
       </div>
     )

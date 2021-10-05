@@ -11,6 +11,8 @@ import ProductShowContainer from "./show/product_show_container";
 import CreateReviewContainer from './reviews/create_review_container';
 import EditReviewContainer from './reviews/edit_review_container';
 
+import CartContainer from './cart/cart_container';
+
 export default () => (
   <div>
     <Switch>
@@ -18,6 +20,7 @@ export default () => (
       <AuthRoute exact path="/login" component={LoginContainer} />
       <ProtectedRoute exact path="/createReview/:product_id" component={CreateReviewContainer}/>
       <ProtectedRoute exact path="/editReview/:review_id" component={EditReviewContainer}/>
+      <ProtectedRoute exact path="/cart" component={CartContainer}/>
       <Route exact path ="/products/:id" component={ProductShowContainer}/>
       <Route exact path="/" component={SplashContainer} />
     </Switch>

@@ -12,3 +12,5 @@ export const fetchReviews = (id) => $.ajax({
   url: `/api/products/${id}/reviews`,
   method:'GET'
 })
+
+

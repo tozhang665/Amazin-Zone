@@ -3,7 +3,8 @@ import React from "react";
 import Nav from "./nav";
 
 const mapStateToProps = (state) =>({
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  items: state.cart
 })
 
 const mapDispatchToProps = (dispatch)=>({

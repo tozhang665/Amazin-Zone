@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
-import { add } from 'date-fns'
+import { add } from 'date-fns';
+import { addToCart } from "../../utils/cart";
+import { useHistory } from "react-router";
 
 
 class productItem extends React.Component{
@@ -9,13 +11,40 @@ class productItem extends React.Component{
     super(props);
 
     this.state = {
-      title: this.props.title,
-      price: this.props.price,
-      description: this.props.description,
-      photoUrl: this.props.photoUrl
+      title: this.props.product.title,
+      price: this.props.product.price,
+      description: this.props.product.description,
+      photoUrl: this.props.product.photoUrl
+    }
+    this.handleAddToCart = this.handleAddToCart.bind(this)
+  }
+
+
+  handleAddToCart(){
+    this.props.addToCart(this.state);
+
+    // const history = useHistory()
+    
+    if(this.props.currentUser){
+      addToCart(this.props.currentUser.id, this.props.product.id)
+      // console.log(this.props.product.id)
+      console.log(this.props)
+      // this.props.history.push(`/products/${this.props.product.id}`)
+      // history.go(0)
+      // console.log(history)
+
+      console.log(this.props)
+
+
+    }else{
+      console.log("logged out")
     }
   }
+
+
   render(){
+    console.log(this.props)
+
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
     ];
@@ -94,7 +123,7 @@ class productItem extends React.Component{
             </div>
 
             <div id="product-purchase-button-container">
-              <button className="product-purchase-button" id="product-purchase-cart-button">Add To Cart</button>
+              <button className="product-purchase-button" id="product-purchase-cart-button" onClick={this.handleAddToCart}>Add To Cart</button>
             </div>
 
             <div id="product-purchase-button-container">

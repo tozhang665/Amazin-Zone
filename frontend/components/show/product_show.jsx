@@ -3,6 +3,7 @@ import NavContainer from "../nav/nav_container"
 import ProductItem from "./product_item";
 import ReviewContainer from "../reviews/reviews_container";
 import { Link } from "react-router-dom";
+import ProductItemContainer from "./product_item_container";
 
 
 
@@ -20,6 +21,9 @@ class ProductShow extends React.Component{
   }
 
   render(){
+
+
+
     if(!this.state.product.price){
       return(
         <div>
@@ -27,13 +31,13 @@ class ProductShow extends React.Component{
         </div>
       )
     }else{
-      let{price,title,description,photoUrl} = this.state.product
+      let{price,title,description,photoUrl,id} = this.state.product
       return(
         <div>
           <NavContainer/>
           <div id="product-show-container">
             <div id="show-to-product-container">
-              <ProductItem price={price} title={title} description={description} photoUrl={photoUrl}/>
+              <ProductItemContainer currentUser={this.props.currentUser} product={this.state.product} id={id} price={price} title={title} description={description} photoUrl={photoUrl} addToCart={this.props.addToCart}/>
             </div>
 
             <hr id="show-horizontal-rule"/>

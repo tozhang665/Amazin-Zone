@@ -2,11 +2,10 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import Root from "./components/root";
 import createStore from "./store/store";
+import {login,logout} from "./actions/session";
+import {grabProducts} from "./actions/product";
 
-
-import {login,logout} from "./actions/session"
-
-import {grabProducts} from "./actions/product"
+import {addToCart} from "./utils/cart"
 
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -29,7 +28,8 @@ document.addEventListener("DOMContentLoaded",()=>{
   window.login = login;
   window.logout = logout;
 
-  window.grab = grabProducts
+  window.grab = grabProducts;
+
 
   ReactDOM.render(<Root store={store}/>,rootEL)
 })
