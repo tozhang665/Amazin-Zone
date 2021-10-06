@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { fetchCart } from "../../utils/cart";
+import SearchBarContainer from "./search_bar_container";
 
 
 class Nav extends React.Component{
@@ -63,9 +64,17 @@ class Nav extends React.Component{
               <Link className="logo-link" to="/">Amazin'Zone</Link>
               </div>
 
+
+
+
               <div id="nav-fill"  className="nav-div">
-                <input type="text" />
+                {/* <input type="text" /> */}
+                <SearchBarContainer/>
               </div>
+
+
+        
+
 
               {this.renderRight(currentUser,logout)}
             </div>

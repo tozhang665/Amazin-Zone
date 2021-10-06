@@ -14,3 +14,8 @@ export const fetchReviews = (id) => $.ajax({
 })
 
 
+export const filterProducts = (searchTerm) => $.ajax({
+  url: '/api/products/search',
+  method:"GET",
+  data:{query: searchTerm}
+})

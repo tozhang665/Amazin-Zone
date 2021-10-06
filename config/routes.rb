@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     resources :users, only:[:create,:show]
     resources :products , only:[:create, :index, :show] do
       resources :reviews, only:[:index,:create]
+      collection do
+        get :search,to: "products#search",as: "search"
+      end
     end
     resources :reviews, only: [:show,:update, :destroy]
     resources :cart, only:[:create,:show,:destroy]

@@ -23,14 +23,14 @@ class CartItem extends React.Component{
         </div>
 
         <div>
-          <div>
+          <div id="cart-item-title">
             {this.props.item.title}
           </div> 
 
-          <div>
+          <div id="cart-item-description">
             {this.props.item.description}
           </div>
-            <button onClick={()=>this.handleDelete(this.props.cartId.id)}>
+            <button id="cart-item-delete-button"onClick={()=>this.handleDelete(this.props.cartId.id)}>
               delete
             </button>
         </div>
