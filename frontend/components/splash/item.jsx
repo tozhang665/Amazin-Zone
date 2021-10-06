@@ -34,7 +34,7 @@ class Item extends React.Component{
               <img id="item-img"src={this.state.photoUrl} alt="" />
             </div>
 
-            <div>
+            <div id="item-div-description">
               {this.state.description}
             </div>
             

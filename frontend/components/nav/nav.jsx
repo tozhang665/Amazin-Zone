@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { fetchCart } from "../../utils/cart";
 import SearchBarContainer from "./search_bar_container";
+import {AiOutlineShoppingCart} from "react-icons/ai";
 
 
 class Nav extends React.Component{
@@ -40,7 +41,7 @@ class Nav extends React.Component{
           </div>
         </div> */}
         <div>
-        <Link to="/cart" id="tempIDForCart">{(this.state.items.cart).length}</Link>
+        <Link to="/cart" id="tempIDForCart"><AiOutlineShoppingCart id="cart-icon"/> {(this.state.items.cart).length} </Link>
         
         </div>
         <button className="button" onClick={()=>logout()}>Log-Out</button>

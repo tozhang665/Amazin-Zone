@@ -16,10 +16,14 @@ class FilteredItem extends React.Component{
               <img id="filtered-item-img"src={this.props.item.photoUrl} alt={this.props.item.title} />
             </div>
             <br />
-            {this.props.item.title}
-            <br />
-            {this.props.item.description}
-            <br />
+            <h6 className="filtered-item-title">
+              {this.props.item.title}
+
+            </h6>
+
+            <div className="filtered-item-description">
+              {this.props.item.description}
+            </div>
             
       </Link>
         {this.props.item.price}

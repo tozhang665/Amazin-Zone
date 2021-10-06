@@ -28,7 +28,7 @@ class SearchBar extends React.Component{
       <div className = "search">
         <div className ="searchInputs">
           <form action="" className="search-bar-form">
-            <input type="text" value={this.state.query} onChange={this.handleInput('query')}  />
+            <input type="text" value={this.state.query} onChange={this.handleInput('query')}  placeholder="Search" />
 
             <button id="search-bar-button"onClick={this.handleFilter}> Search </button>
           </form>
