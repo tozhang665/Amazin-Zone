@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../nav/nav";
 import NavContainer from "../nav/nav_container"
 import Item from "./item";
+import Footer from "./footer";
 
 
 class Splash extends React.Component{
@@ -36,7 +36,7 @@ class Splash extends React.Component{
             </div> 
 
         </div>
-
+        <Footer/>
       </div>
     )
   }
