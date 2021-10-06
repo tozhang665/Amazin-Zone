@@ -20,18 +20,17 @@ class SearchBar extends React.Component{
   handleFilter(e){
     e.preventDefault();
     this.props.grabFiltered(this.state.query)
-    .then(()=>this.props.history.push("/filteredIndex"))
-
+    .then(()=>this.props.history.push(`/filteredIndex/${this.state.query}`))
   }
 
   render(){
     return(
       <div className = "search">
         <div className ="searchInputs">
-          <form action="">
+          <form action="" className="search-bar-form">
             <input type="text" value={this.state.query} onChange={this.handleInput('query')}  />
 
-            <button onClick={this.handleFilter}> Search </button>
+            <button id="search-bar-button"onClick={this.handleFilter}> Search </button>
           </form>
         </div>
         <div className="dataResult"> </div>

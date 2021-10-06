@@ -1,0 +1,32 @@
+#filtered-item-component-container{
+  display: flex;
+  justify-content: center;
+}
+
+#filtered-item-centering{
+  width: 60%;
+}
+#filtered-item-container{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // border: 5px solid black;
+}
+
+#filtered-item-div{
+  // margin: 20px;
+  // height: 200px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+
+#filtered-item-img{
+  width: 100%;
+  height: auto;
+}

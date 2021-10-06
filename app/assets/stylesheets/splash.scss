@@ -14,18 +14,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   width: 70%;
+  height: 1000px;
   // background-color: green;
   //#b6babe,#EAEDED
   padding-top: 10%;
 }
-
-
-
-
-
-
-
-
 
 
 #main_splash_container{
@@ -33,6 +26,9 @@
   width: 70%;
   height: auto;
   background-color: #EAEDED;
+
+  min-width: 1000px;
+
 }
 #main_splash_logo{
   width: 100%;

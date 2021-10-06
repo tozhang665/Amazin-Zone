@@ -22,7 +22,7 @@ export default () => (
       <ProtectedRoute exact path="/createReview/:product_id" component={CreateReviewContainer}/>
       <ProtectedRoute exact path="/editReview/:review_id" component={EditReviewContainer}/>
       <ProtectedRoute exact path="/cart" component={CartContainer}/>
-      <Route exact path ="/filteredIndex" component={FilteredIndexContainer}/>
+      <Route exact path ="/filteredIndex/:search_terms" component={FilteredIndexContainer}/>
       <Route exact path ="/products/:id" component={ProductShowContainer}/>
       <Route exact path="/" component={SplashContainer} />
     </Switch>

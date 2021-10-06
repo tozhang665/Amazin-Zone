@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -9,14 +10,22 @@ class FilteredItem extends React.Component{
     return(
 
     <div>
-      <img src={this.props.item.photoUrl} alt={this.props.item.title} />
-      <br />
-      {this.props.item.title}
-      <br />
-      {this.props.item.description}
-      <br />
-      {this.props.item.price}
-      <br />
+      <Link to={`/products/${this.props.item.id}`} id="item-desc-link">
+            
+            <div >
+              <img id="filtered-item-img"src={this.props.item.photoUrl} alt={this.props.item.title} />
+            </div>
+            <br />
+            {this.props.item.title}
+            <br />
+            {this.props.item.description}
+            <br />
+            
+      </Link>
+        {this.props.item.price}
+        <br />
+
+
     </div>
     )
   }

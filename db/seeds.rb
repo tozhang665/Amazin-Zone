@@ -60,7 +60,7 @@ file6 = URI.open('https://amazin-zone-seeds.s3.us-west-1.amazonaws.com/picture-s
 product6.photo.attach(io:file6, filename:"echo_show_15.jpg")
 
 
-product7 = Product.create({title:"TV Sound Bar",description:"This ultra slim TV sound bar will be great for any home. Even those without a home",price:199.00})
+product7 = Product.create({title:"TV Sound Bar",description:"This ultra slim TV sound bar will be great for any home. Even those without a home",price:199.99})
 file7 = URI.open('https://amazin-zone-seeds.s3.us-west-1.amazonaws.com/sound-bar.jpg')
 product7.photo.attach(io:file7, filename:"sound_bar.jpg")
 

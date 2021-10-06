@@ -25,12 +25,24 @@ class Item extends React.Component{
         </div>
 
         
-        <div id="item-img-div">
-          <img id="item-img"src={this.state.photoUrl} alt="" />
-        </div>
 
-        <div id="item-desc-div">
-          <Link to={`/products/${this.state.id}`} id="item-desc-link">{this.state.description}</Link>
+        <div id="item-desc-link">
+
+          <Link to={`/products/${this.state.id}`} id="item-desc-link">
+            
+            <div id="item-img-div">
+              <img id="item-img"src={this.state.photoUrl} alt="" />
+            </div>
+
+            <div>
+              {this.state.description}
+            </div>
+            
+            
+            </Link>
+
+
+
         </div>
          
 

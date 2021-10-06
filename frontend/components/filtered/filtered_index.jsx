@@ -16,30 +16,35 @@ class FilteredIndex extends React.Component{
   }
 
 
-  render(){
-    if(!Array.isArray(this.props.products)){
-      // this.props.history.push("/")
-      return(
-      <div>
-        <NavContainer/>
+  componentDidMount(){
+    this.props.grabFiltered(this.props.searchTerms)
+    .then((data)=> {
+      this.setState({items:data.payload})
 
-        Nothing was found
-
-
-      </div>
+      }
     )
-    }
-    console.log(this.props.products)
+  }
+
+  render(){
+    // window.location.reload(false)
     return(
       <div>
         <NavContainer/>
-        {this.props.products.map((ele,idx)=>(
-          <div key={idx}>
+        <div id="filtered-item-component-container">
+          <div id="filtered-item-centering">
 
-            <FilteredItem item={ele}/>
+            <div id="filtered-item-container">
 
+              {this.state.items.map((ele,idx)=>(
+                <div id="filtered-item-div" key={idx}>
+
+                  <FilteredItem item={ele}/>
+
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     )
   }
