@@ -23,6 +23,21 @@ def create
   def show
     @user = selected_user
   end
+
+
+  def clear
+    user = User.find(params[:user_id])
+      if user
+        products = user.cart_items
+        products.each do |ele|
+          ele.destroy
+        end
+        render json:["deleted"]
+      else
+        render json:["no user found"]
+      end
+
+  end
   
   
   private

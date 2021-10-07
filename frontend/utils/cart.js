@@ -15,3 +15,10 @@ export const deleteItemFromCart = (cartId) => $.ajax({
   url: `/api/cart/${cartId}`,
   method:"DELETE"
 })
+
+
+export const clearCart = (userId)=> $.ajax({
+  url: '/api/users/clear',
+  method:"GET",
+  data:{user_id: userId}
+})
