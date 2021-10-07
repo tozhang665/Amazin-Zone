@@ -144,12 +144,12 @@ class Checkout extends React.Component{
                         
                         <div>Total before tax:</div>
                         <div>${(total + shipping).toFixed(2)}</div>
-                        <div>Estimated tax to be collected:*</div>
+                        <div>Estimated tax :</div>
                         <div>${tax.toFixed(2)}</div>
 
                         <div id="order-summary-total-red">Order total:</div>
 
-                        <div id="order-summary-total-red">${(total + shipping + tax).toFixed(2)}</div>
+                        <div id="order-summary-total-red" className="price-to-move-left">${(total + shipping + tax).toFixed(2)}</div>
 
                     </div>
 
