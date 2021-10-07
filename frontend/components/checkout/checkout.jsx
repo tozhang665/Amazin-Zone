@@ -58,41 +58,41 @@ class Checkout extends React.Component{
 
               <div>
                 <div>
-                  <h1>
+                  <h1 className="h1-checkout">
                     Shipping address
                   </h1>
-                  <label>Full name(First and Last Name)
+                  <label className="checkout-bolder">Full name(First and Last Name)
                     <br />
-                    <input type="text" />
+                    <input className="checkout-inputs" type="text" />
                   </label>
                   <br />
-                  <label htmlFor="">Address
+                  <label className="checkout-bolder">Address
                     <br />
-                    <input type="text" placeholder={"Street address or P.O Box"}/>
+                    <input className="checkout-inputs" type="text" placeholder={"Street address or P.O Box"}/>
                     <br />
-                    <input type="text" placeholder={"Apt, suite, unit, building, floor,etc."}/>
+                    <input className="checkout-inputs" ype="text" placeholder={"Apt, suite, unit, building, floor,etc."}/>
                   </label>
 
                   <div id="city-state-zip-divier">
                     <div>
-                      <label>City 
+                      <label className="checkout-bolder">City 
                         <br />
-                        <input type="text" />
+                        <input className="checkout-inputs" type="text" placeholder={"San Francisco"}/>
                       </label>
                     </div>
 
                     <div>
-                      <label>State 
+                      <label className="checkout-bolder">State 
                         <br />
-                        <input type="text" />
+                        <input className="checkout-inputs" type="text" placeholder={"CA"}/>
                       </label>
                     </div>
 
 
                     <div>
-                      <label>ZipCode
+                      <label className="checkout-bolder">ZipCode
                         <br />
-                        <input type="text" />
+                        <input className="checkout-inputs" type="text" placeholder={"00000"} />
                       </label>
                     </div>
 
@@ -101,18 +101,18 @@ class Checkout extends React.Component{
                 </div>
 
                 <div>
-                  <h1>
+                  <h1 className="h1-checkout">
                     Payment info
                   </h1>
                   <div id="checkout-info-splitter">
-                    <div>Card Number</div>
-                    <input type="text" />
-                    <div>Name on card</div>
-                    <input type="text" />
-                    <div>Expiration date</div>
-                    <input type="text" />
-                    <div>Security Code</div>
-                    <input type="text" />
+                    <div className="checkout-bolder">Card Number</div>
+                    <input className="checkout-inputs" type="text" placeholder={"3333 3333 3333 3333"}/>
+                    <div className="checkout-bolder">Name on card</div>
+                    <input className="checkout-inputs" type="text" placeholder={"John Doe"}/>
+                    <div className="checkout-bolder">Expiration date</div>
+                    <input className="checkout-inputs" type="text" placeholder={"10/2099"}/>
+                    <div className="checkout-bolder">Security Code</div>
+                    <input className="checkout-inputs" type="text" placeholder={"000"}/>
                   </div>
                 </div>
 
@@ -131,25 +131,32 @@ class Checkout extends React.Component{
                 </div>
               </div>
 
-              <div>
-                <h1>Order Summary</h1>
-                <div id="order-summary-container">
-                    <div>Items({items}):</div>
-                    <div>{total.toFixed(2)}</div>
-                    <div>Shipping & handling</div>
-                    <div>${shipping.toFixed(2)}</div>
-                    
-                    <div>Total before tax:</div>
-                    <div>${(total + shipping).toFixed(2)}</div>
-                    <div>Estimated tax to be collected:*</div>
-                    <div>${tax.toFixed(2)}</div>
-
-                    <div>Order total:</div>
-
-                    <div>${(total + shipping + tax).toFixed(2)}</div>
-
+              <div id="checkout-payment-info-container">
+                <div id="checkout-button-center">
+                  <button id="checkout-button-placeyourorder"onClick={this.handleCheckout}>Place Your Order</button>
                 </div>
-                <button onClick={this.handleCheckout}>Check Out</button>
+
+
+                  <div id="order-summary-container-5">
+                    <h1 className="h1-order-summary">Order Summary</h1>
+                    <div id="order-summary-information-container">
+                        <div>Items({items}):</div>
+                        <div>{total.toFixed(2)}</div>
+                        <div>Shipping & handling</div>
+                        <div id="adding-underline">${shipping.toFixed(2)}</div>
+                        
+                        <div>Total before tax:</div>
+                        <div>${(total + shipping).toFixed(2)}</div>
+                        <div>Estimated tax to be collected:*</div>
+                        <div>${tax.toFixed(2)}</div>
+
+                        <div id="order-summary-total-red">Order total:</div>
+
+                        <div id="order-summary-total-red">${(total + shipping + tax).toFixed(2)}</div>
+
+                    </div>
+
+                  </div>
               </div>
 
             </div>       

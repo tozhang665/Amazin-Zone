@@ -12,7 +12,7 @@
 
 #checkout-container-spliiter{
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 5fr 2fr;
 }
 
 #city-state-zip-divier{
@@ -29,4 +29,87 @@
 #order-summary-container{
   display: grid;
   grid-template-columns: 1fr 50px;
+}
+
+
+.h1-checkout{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+
+.checkout-bolder{
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.checkout-inputs{
+  height: 30px;
+  margin: 5px;
+  width: 60%;
+}
+
+
+#checkout-payment-info-container{
+  border:1px solid #d2d2d2;
+  height: 60%;
+  margin: 15px;
+  padding-top:15px;
+}
+
+#checkout-button-center{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d2d2d2;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 15px;
+}
+
+#checkout-button-placeyourorder{
+  width: 70%;
+  height: 2.0rem;
+  border-radius: 10px;
+  background-color: #FFD814;
+  border-color: transparent;
+}
+
+#checkout-button-placeyourorder:hover{
+  cursor: pointer;
+  background-color: #CCAA00;
+}
+
+#order-summary-container-5{
+  margin: 5px;
+}
+
+#order-summary-information-container{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+}
+
+.h1-order-summary{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#order-summary-total-red{
+  font-size: 20px;
+  font-weight: 700;
+  color: #B12704;
+  border-top: 1px solid #d2d2d2;
+}
+
+
+
+#order-summary-information-container > div{
+  line-height: 1.5rem;
+}
+
+#adding-underline{
+  border-bottom: 1px solid #d2d2d2;
+
 }
