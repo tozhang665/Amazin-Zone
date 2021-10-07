@@ -14,8 +14,7 @@ class CartItem extends React.Component{
   }
 
   render(){
-    // console.log(this.props.item)
-    // console.log(this.props.cartId)
+
     return(
       <div id="cart-item">
         <div>

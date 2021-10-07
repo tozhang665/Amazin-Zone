@@ -21,10 +21,7 @@ class ReviewItem extends React.Component{
   }
 
   checkCurrentUser(){
-    // console.log("grabbing")
-    // console.log(this.props.currentUser.id)
-    // console.log(this.state.userId)
-    // console.log(parseInt(this.props.currentUser.id) === this.state.userId)
+
     if(this.props.currentUser){
       if(parseInt(this.props.currentUser.id) === this.state.userId){
       return(
@@ -50,9 +47,7 @@ class ReviewItem extends React.Component{
 
   render(){
     let {id,userId,title,body,rating,reviewer} = this.state
-    // console.log(this.props.currentUser)
-    // console.log(this.props.item)
-    // console.log(this.props.item)
+
     let buttonDiv = this.checkCurrentUser()
     return(
       <div id="review-item-container">

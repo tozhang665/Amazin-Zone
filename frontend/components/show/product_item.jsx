@@ -33,17 +33,8 @@ class productItem extends React.Component{
       
     }
   }
-  
-  // console.log(this.props.product.id)
-  // console.log(this.props)
-  // this.props.history.push(`/products/${this.props.product.id}`)
-  // history.go(0)
-  // console.log(history)
-
-  // console.log(this.props)
 
   render(){
-    console.log(this.props)
 
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"

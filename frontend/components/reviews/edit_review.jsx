@@ -41,28 +41,12 @@ class EditReview extends React.Component{
   }
 
   handlePost(){
-   console.log(this.state.id)
     editReview(parseInt(this.state.id),this.state).then(()=>this.props.history.goBack())
   }
 
   handleDelete(){
     deleteReview(parseInt(this.state.id)).then(()=>this.props.history.goBack())
   }
-
-
-  // renderErrors() {
-  //   return(
-  //     <ul>
-  //       {this.props.sessionErrors.map((error, i) => (
-  //         <li className="login-errors" key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
-
-
 
   render(){
     return(

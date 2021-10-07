@@ -45,12 +45,8 @@ class CreateReview extends React.Component{
   }
 
 
-  // componentWillUnmount(){
-  //   this.props.resetErrors();
-  // }
 
   render(){
-    // console.log(this.state)
     return(
       <div>
         <NavContainer/>

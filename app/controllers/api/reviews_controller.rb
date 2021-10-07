@@ -12,7 +12,6 @@ class Api::ReviewsController < ApplicationController
     if review.save
       render json: review
     else
-      puts review.errors.full_messages
       render json: ["something went wrong"],status:401
     end
 
