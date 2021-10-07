@@ -59,7 +59,6 @@ class Cart extends React.Component{
 
               <div id="cart-proceed-to-checkout-button">
                 <Link className="cart-redirect-button" id="cart-checkout-redirect-button" to="/checkout">Proceed to checkout</Link>
-                {/* <button className="cart-redirect-button" id="cart-checkout-redirect-button">Proceed to checkout</button> */}
               </div>
             </div>
           </div>
