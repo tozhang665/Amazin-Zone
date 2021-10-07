@@ -11,8 +11,8 @@ import ProductShowContainer from "./show/product_show_container";
 import CreateReviewContainer from './reviews/create_review_container';
 import EditReviewContainer from './reviews/edit_review_container';
 import FilteredIndexContainer from './filtered/filtered_index_container';
-
 import CartContainer from './cart/cart_container';
+import CheckoutContainer from './checkout/checkout_container';
 
 export default () => (
   <div>
@@ -22,6 +22,7 @@ export default () => (
       <ProtectedRoute exact path="/createReview/:product_id" component={CreateReviewContainer}/>
       <ProtectedRoute exact path="/editReview/:review_id" component={EditReviewContainer}/>
       <ProtectedRoute exact path="/cart" component={CartContainer}/>
+      <ProtectedRoute exact path="/checkout" component={CheckoutContainer}/>
       <Route exact path ="/filteredIndex/:search_terms" component={FilteredIndexContainer}/>
       <Route exact path ="/products/:id" component={ProductShowContainer}/>
       <Route exact path="/" component={SplashContainer} />

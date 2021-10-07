@@ -2,6 +2,7 @@ import React from "react";
 import NavContainer from "../nav/nav_container";
 import CartItem from "./cartItem";
 import { fetchCart } from "../../utils/cart";
+import { Link } from "react-router-dom";
 
 class Cart extends React.Component{
   constructor(props){
@@ -57,7 +58,8 @@ class Cart extends React.Component{
               Subtotal ({count} items): ${total}
 
               <div id="cart-proceed-to-checkout-button">
-                <button className="cart-redirect-button" id="cart-checkout-redirect-button">Proceed to checkout</button>
+                <Link className="cart-redirect-button" id="cart-checkout-redirect-button" to="/checkout">Proceed to checkout</Link>
+                {/* <button className="cart-redirect-button" id="cart-checkout-redirect-button">Proceed to checkout</button> */}
               </div>
             </div>
           </div>
