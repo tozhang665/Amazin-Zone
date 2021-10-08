@@ -19,18 +19,21 @@ https://amazon-clone-tz.herokuapp.com/
 
 ### User Authentication
   
-   IMAGE HERE
+   ![](app/assets/images/readMe_images/signin.png)
   
   * Users can Sign Up / Sign In / Sign Out their account
   * There is a demo user button for those who wish to use a premade account
   
 
 ### Reviews
-  IMAGE HERE
-  
+  ![](app/assets/images/readMe_images/show.png)
+  ![](app/assets/images/readMe_images/reviewCreate.png)
   * Users can add a review to a product when they are logged in. If someone tries to add a Review without being logged in then it will redirect them to the login page
   * From there, the user can choose to login with an account or to use the demo account. 
   * Once a review has been added to a product, a list of reviews will be shown in the product show page. 
+ ![](app/assets/images/readMe_images/EditReviewButton.png)
+ 
+ ![](app/assets/images/readMe_images/EditReviewPage.png)
   * If the user logged in is the owner of the review, a button will show up which would allow the user to edit the review.
   * Once inside the Edit page, the user can change whatever they want about the review as well as delete the review entirely
 
