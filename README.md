@@ -15,16 +15,20 @@ https://amazon-clone-tz.herokuapp.com/
 * Frontend: React/Redux
 * Backend: Ruby on rails, PostgresSQL, AWS
 
-## Key Features
+# Key Features
 
-### User Authentication
+## User Authentication
   
    ![](app/assets/images/readMe_images/signin.png)
   
   * Users can Sign Up / Sign In / Sign Out their account
   * There is a demo user button for those who wish to use a premade account
-  
 
+
+## Search
+
+* On the top of the page, there is a search bar that will take in a string. This string will then be matched with all item's title and descriptions. It will then go to a new index page with all of the items that match with the query string. 
+  
 ## Reviews
   ![](app/assets/images/readMe_images/EditReviewButton.png)
   ![](app/assets/images/readMe_images/reviewCreate.png)
@@ -45,6 +49,7 @@ https://amazon-clone-tz.herokuapp.com/
 * Once inside the Cart Show page, they are able to see the total cost of their cart before tax and shipping as well as able to delete any items they no longer want.
 * From here they can go to the checkout page to see their total cost of tax and shipping included.
 * They could then checkout their cart which will clear their cart. 
+
 
 
 
