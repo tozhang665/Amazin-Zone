@@ -8,7 +8,7 @@ https://amazon-clone-tz.herokuapp.com/
 
 ## Description
  Amazin-Zone is a clone of the popular website Amazin.com . It is made with the Create/Read/Update/Delete functionality on Review and Cart. It also includes the 
- 
+ [app/assets/images/readMe_images/Screen Shot 2021-10-08 at 10.13.09 AM.png]
  
 ## Technology used
 
