@@ -17,10 +17,6 @@
       </script>
       
     <% end %>
-    <meta property="og:title" content="Amazon Clone"/>
-    <meta property="og:image" content="<%=image_url("index.png")%>"/>
-    <meta property="og:description" content="Amazin-Zone is a clone of the popular website Amazin.com by using Ruby On Rails and React. It is made with the Create/Read/Update/Delete functionality on Review and Cart as well as User Authentication"/>
-    <meta property="og:url" content="https://amazon-clone-tz.herokuapp.com/#/"/>
     
     <script>
       window.main_splash = "<%= image_url("main_background.jpg")%>"
@@ -30,6 +26,10 @@
       window.github_logo = "<%= image_url("github_logo.png")%>"
       window.linkedin_logo = "<%= image_url("linkedin_logo.png")%>"
     </script>
+    <meta property="og:title" content="Amazon Clone"/>
+    <meta property="og:image" content="<%= image_url("index.png")%>"/>
+    <meta property="og:description" content="Amazin-Zone is a clone of the popular website Amazin.com by using Ruby On Rails and React. It is made with the Create/Read/Update/Delete functionality on Review and Cart as well as User Authentication"/>
+    <meta property="og:url" content="https://amazon-clone-tz.herokuapp.com/#/"/>
 
     <link rel="icon" type="image/x-icon" href="<%= image_url('amazon_favicon2.png') %>" />
   </head>
