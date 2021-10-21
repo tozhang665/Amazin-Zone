@@ -53,7 +53,9 @@ Rails.application.configure do
   config.assets.quiet = true
 
 
-  config.assets.check_precompiled_asset = false
+  # config.assets.check_precompiled_asset = false
+
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
