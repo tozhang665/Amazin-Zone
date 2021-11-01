@@ -1,5 +1,5 @@
 import React from "react";
-import NavContainer from "../nav/nav_container";
+import FilteredNavContainer from "./fitlered_nav_container";
 import { withRouter } from "react-router";
 import FilteredItem from "./filtered_item";
 
@@ -28,7 +28,7 @@ class FilteredIndex extends React.Component{
     if(this.state.items.length === 0){
       return(
         <div>
-          <NavContainer/>
+          <FilteredNavContainer/>
           <div id="filtered-item-component-container">
             Nothing was found in the Database
           </div>
@@ -37,7 +37,7 @@ class FilteredIndex extends React.Component{
     }else{
       return(
         <div>
-          <NavContainer/>
+          <FilteredNavContainer/>
           <div id="filtered-item-component-container">
             <div id="filtered-item-centering">
   

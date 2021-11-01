@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { fetchCart } from "../../utils/cart";
-import SearchBarContainer from "./search_bar_container";
+// import SearchBarContainer from "./search_bar_container";
 import {AiOutlineShoppingCart} from "react-icons/ai";
 
 
-class Nav extends React.Component{
+class FilteredNav extends React.Component{
   constructor(props){
     super(props)
 
@@ -32,6 +32,14 @@ class Nav extends React.Component{
     }else{
       return(
       <div id="nav-right"  className="nav-div">
+        {/* <div id="nav-right-current-user-container">
+          <div>
+            Hello 
+          </div>
+          <div id="nav-right-current-user-email">
+            {currentUser.email}
+          </div>
+        </div> */}
         <div>
         <Link to="/cart" id="tempIDForCart"><AiOutlineShoppingCart id="cart-icon"/> {(this.state.items.cart).length} </Link>
         
@@ -51,13 +59,25 @@ class Nav extends React.Component{
           <div id="navbar">
 
             <div id="nav-belt">
+
               <div id="nav-left" className="nav-div">
               <Link className="logo-link" to="/">Amazin'Zone</Link>
               </div>
 
+
+
+
               <div id="nav-fill"  className="nav-div">
-                <SearchBarContainer/>
+                {/* <input type="text" /> */}
+                {/* <SearchBarContainer/> */}
+                <div id="found-items-title">
+                  Found Items
+                </div>
               </div>
+
+
+        
+
 
               {this.renderRight(currentUser,logout)}
             </div>
@@ -67,4 +87,4 @@ class Nav extends React.Component{
   }
 }
 
-export default Nav
+export default FilteredNav
