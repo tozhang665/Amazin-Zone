@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
 
 class SearchBar extends React.Component{
@@ -19,8 +20,15 @@ class SearchBar extends React.Component{
 
   handleFilter(e){
     e.preventDefault();
-    this.props.grabFiltered(this.state.query)
-    .then(()=>this.props.history.push(`/filteredIndex/${this.state.query}`))
+    // console.log(this.state.query)
+    // this.props.grabFiltered(this.state.query)
+    // .then(()=>this.props.history.push(`/filteredIndex/${this.state.query}`))
+    console.log(this.state.query)
+    if(this.state.query ===""){
+      this.props.history.push(`/filteredIndex/${" "}`)
+    }else{
+      this.props.history.push(`/filteredIndex/${this.state.query}`)
+    }
   }
 
   render(){
@@ -30,7 +38,8 @@ class SearchBar extends React.Component{
           <form action="" className="search-bar-form">
             <input type="text" value={this.state.query} onChange={this.handleInput('query')}  placeholder="Search" />
 
-            <button id="search-bar-button"onClick={this.handleFilter}> Search </button>
+            {/* <button id="search-bar-button"onClick={this.handleFilter}> Search </button> */}
+            <Link to={`/filteredIndex/${this.state.query} `} id="search-bar-button">Search</Link>
           </form>
         </div>
         <div className="dataResult"> </div>

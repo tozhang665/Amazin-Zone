@@ -79,7 +79,34 @@
 }
 
 #product-show-create-review-button{
-  width: 100%;
-  color: black;
+  // width: 100%;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  text-decoration: none;
+  color: #333333;
+  padding: 6px 12px 6px 12px;
+  // padding: 15px 12px 15px 12px;
+  background:#f0c14b;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#a88734 #9c7e31 #846a29;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
+
+@media screen and (max-width: 1450px) {
+  #product-show-statistics{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+  }
+  #product-show-create-review-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      // padding: 6px 12px 6px 12px;
+    // background:lightcyan;
+
+  }
+}

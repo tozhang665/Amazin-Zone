@@ -44,7 +44,7 @@ class ProductShow extends React.Component{
 
             <div id="product-show-review-statistics-container">
                 <div id="product-show-statistics">
-                  <Link className="button" id="product-show-create-review-button" to= {`/createReview/${this.props.itemId}`}>Create a Review</Link>
+                  <Link id="product-show-create-review-button" to= {`/createReview/${this.props.itemId}`}>Create a Review</Link>
                 </div>
 
 

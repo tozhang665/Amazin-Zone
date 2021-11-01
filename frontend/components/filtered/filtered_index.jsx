@@ -11,42 +11,51 @@ class FilteredIndex extends React.Component{
     super(props)
 
     this.state = {
+      terms:this.props.searchTerms,
       items: []
     }
-  }
-
-
-  componentDidMount(){
     this.props.grabFiltered(this.props.searchTerms)
     .then((data)=> {
       this.setState({items:data.payload})
-
       }
     )
   }
 
   render(){
-    // window.location.reload(false)
-    return(
-      <div>
-        <NavContainer/>
-        <div id="filtered-item-component-container">
-          <div id="filtered-item-centering">
-
-            <div id="filtered-item-container">
-
-              {this.state.items.map((ele,idx)=>(
-                <div id="filtered-item-div" key={idx}>
-
-                  <FilteredItem item={ele}/>
-
-                </div>
-              ))}
+    console.log("HITTING")
+    console.log(this.state.items)
+    console.log(this.props.searchTerms)
+    if(this.state.items.length === 0){
+      return(
+        <div>
+          <NavContainer/>
+          <div id="filtered-item-component-container">
+            Nothing was found in the Database
+          </div>
+        </div>
+      )
+    }else{
+      return(
+        <div>
+          <NavContainer/>
+          <div id="filtered-item-component-container">
+            <div id="filtered-item-centering">
+  
+              <div id="filtered-item-container">
+  
+                {this.state.items.map((ele,idx)=>(
+                  <div id="filtered-item-div" key={idx}>
+  
+                    <FilteredItem item={ele}/>
+  
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
 }
 

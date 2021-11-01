@@ -19,10 +19,13 @@ class Api::ProductsController < ApplicationController
     if @products.length > 0 
       render :index
     else
-      render json: ["No results matching for #{query}"],status:404
+      # render json: ["No results matching for #{query}"],status:404
+      render json: []
     end
 
   end
+
+
   def post_params
     params.require(:products).permit(:title,:description,:price)
   end

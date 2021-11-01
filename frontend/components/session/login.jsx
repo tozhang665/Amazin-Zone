@@ -56,6 +56,7 @@ class Login extends React.Component {
         <div id="login-session-form">
           <div id="login-title"><h2 id="login-title">Sign-in</h2></div>
 
+              {this.renderErrors()}
           <div id="login-center-section">
 
             <div id="login-base">
@@ -86,7 +87,6 @@ class Login extends React.Component {
             </div>
           </div>
           <br />
-          {this.renderErrors()}
           <Link className="button" id="signup-Link"to="/signup">Create your Amazin Account</Link>
         </div>
 

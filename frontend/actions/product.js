@@ -35,7 +35,8 @@ export const grabProduct = (id) => dispatch => productUtil.fetchProduct(id)
 
 export const grabFiltered = (term) => dispatch => productUtil.filterProducts(term)
 .then(
-  (payload) => dispatch(receiveAllProducts(payload))
+  (payload) => dispatch(receiveAllProducts(payload)),
+  (err)=> dispatch(receiveErrors(err.responseJSON))
 )
 
 

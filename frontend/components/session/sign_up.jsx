@@ -54,6 +54,7 @@ render() {
         <div id="login-session-form">
           <div id="login-title"><h2 id="login-title">Create Account</h2></div>
 
+          {this.renderErrors()}
           <div id="login-center-section">
 
             <div id="login-base">
@@ -70,13 +71,12 @@ render() {
               <br />
               <button className="button login-button" onClick={this.handleSubmit}>Create Account</button>
               <br />
-
+              <Link className="button" id="signup-Link"to="/login">Already Have an account?</Link>
             </form>
 
             </div>
           </div>
           <br />
-          {this.renderErrors()}
         </div>
       </div>
       </div>

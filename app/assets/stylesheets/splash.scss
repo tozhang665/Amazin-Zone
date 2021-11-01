@@ -6,6 +6,18 @@
   height: 100vh;
 }
 
+
+@media screen and (max-height: 950px) {
+  #splash-container {
+    height: 1000px;
+    // background-color: blue;
+  }
+
+  #item-div-description{
+    line-height: 1.0rem;
+  }
+}
+
 #item-container{
 
   position:relative;

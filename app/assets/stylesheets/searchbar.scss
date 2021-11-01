@@ -23,10 +23,16 @@
 }
 
 #search-bar-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // height: 80%;
   // width: 80%;
   background-color: #f0c14b;
+  text-decoration: none;
   // color:white;
+  color: #333333;
+  padding-top: auto;
   border-radius: 5px;
   cursor:pointer;
 }
