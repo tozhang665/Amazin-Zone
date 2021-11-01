@@ -20,10 +20,6 @@ class SearchBar extends React.Component{
 
   handleFilter(e){
     e.preventDefault();
-    // console.log(this.state.query)
-    // this.props.grabFiltered(this.state.query)
-    // .then(()=>this.props.history.push(`/filteredIndex/${this.state.query}`))
-    console.log(this.state.query)
     if(this.state.query ===""){
       this.props.history.push(`/filteredIndex/${" "}`)
     }else{

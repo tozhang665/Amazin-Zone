@@ -22,9 +22,7 @@ class FilteredIndex extends React.Component{
   }
 
   render(){
-    console.log("HITTING")
-    console.log(this.state.items)
-    console.log(this.props.searchTerms)
+
     if(this.state.items.length === 0){
       return(
         <div>
