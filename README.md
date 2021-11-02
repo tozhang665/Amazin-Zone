@@ -51,5 +51,50 @@ https://amazon-clone-tz.herokuapp.com/
 * They could then checkout their cart which will clear their cart. 
 
 
+## Implementation
+There are a few conditionals in my code and one of them is in the nav bar. Where if the user is logged in, the right side of the nav bar would change accordingly. If there is not a user logged in, my application would render a button for signing in as well as signing up. But, if a user is logged in, my applicaiton would render their cart as well as a button to sign out. 
+
+``` javascript
+  renderRight(currentUser,logout){
+    if(currentUser===null){
+      return(
+      <div id="nav-right"  className="nav-div">
+        <Link className="button" to="/login">Sign-in</Link>
+        <Link className="button" to="/signup">Sign-up</Link>
+      </div>
+    )
+    }else{
+      return(
+      <div id="nav-right"  className="nav-div">
+        <div>
+        <Link to="/cart" id="tempIDForCart"><AiOutlineShoppingCart id="cart-icon"/> {(this.state.items.cart).length} </Link>
+        
+        </div>
+        <button className="button" onClick={()=>logout()}>Log-Out</button>
+      </div>
+    )
+    }
+  }
+
+```
+
+For my search function, the main operations would be in the backend. where my applicaiton will search through all of the products' title and description for the string passed through. If there is at least 1 product found with that string, it would return the item and its details in a array while if there is nothing found, a empty array would be shown. 
+
+```javascript
+  def search
+    query = params[:query]
+
+    @products = Product.where('title ILIKE ? OR description ILIKE ?', "%#{query}%", "%#{query}%")
+    
+    if @products.length > 0 
+      render :index
+    else
+      render json: []
+    end
+
+  end
+
+```
+
 
 
