@@ -20,7 +20,6 @@ class Cart extends React.Component{
     }
   }
 
-
   render(){
     let total = 0
     let count = 0
@@ -28,15 +27,28 @@ class Cart extends React.Component{
       total = total + ele.price
       count++
     })
-    
+    let cartItems = Object.values(this.state.items.cart)
+    let counter = {}
+    cartItems.forEach((ele,idx)=>{
+      if(counter[ele.id]===undefined){
+        counter[ele.id] = 1;
+      }else{
+        counter[ele.id]++;
+      }
+    })
+    let items = []
+
+    let counterKeys = Object.keys(counter)
+    let counterValues = Object.values(counter)
+    counterKeys.forEach((ele,idx)=>{
+      items.push([cartItems.find(ele2=>ele2.id===parseInt(ele)),counterValues[idx]]  )
+    })
+
     return(
       <div>
         <NavContainer/>
-
         <div id="cart-splitter">
-
           <div>
-
             <div id="shopping-cart-container">
               <div id="shopping-cart-title">
                 Shopping Cart
@@ -46,10 +58,9 @@ class Cart extends React.Component{
               </div>
             </div>
 
-            {(this.state.items.cart).map((ele,idx)=>(
-              <CartItem key={idx} item={ele} cartId={this.state.items.products[idx]}/>
+            {(items).map((ele,idx)=>(
+              <CartItem key={idx} item={ele[0]} amount={ele[1]} cartId={this.state.items.products[idx]} currentUser ={this.props.currentUser} cartItems={this.state.items.products}/>
             ))}
-
           </div>
 
 
@@ -67,13 +78,8 @@ class Cart extends React.Component{
 
       </div>
 
-
-
     )
   }
-
-
-
 }
 
 

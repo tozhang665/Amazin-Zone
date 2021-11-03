@@ -28,8 +28,7 @@ class Checkout extends React.Component{
   let curID = this.props.currentUser.id
  
     clearCart(curID).then((ele) =>{
-      alert("You have checked out!")
-      this.props.history.push("/")})
+      this.props.history.push("/thankyou")})
   }
 
 

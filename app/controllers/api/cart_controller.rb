@@ -5,11 +5,12 @@ class Api::CartController < ApplicationController
   
   def create
     cart = CartItem.new(cart_params)
-    if cart.save
-      render json:cart
-    else
-      render json:["Something went wrong"],status:401
-    end
+    cart.save
+    # if cart.save
+    render json:cart
+    # else
+    #   render json:["Something went wrong"],status:401
+    # end
   end
   
   def show
@@ -23,7 +24,6 @@ class Api::CartController < ApplicationController
   def destroy
     cartItem = CartItem.find(params[:id]).destroy
     render json: cartItem
-
   end
 
 

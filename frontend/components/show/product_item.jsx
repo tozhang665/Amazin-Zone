@@ -21,16 +21,10 @@ class productItem extends React.Component{
 
 
   handleAddToCart(){
-    this.props.addToCart(this.state);
-
-    // const history = useHistory()
-    
     if(this.props.currentUser){
       addToCart(this.props.currentUser.id, this.props.product.id)
-      
       window.location.reload(false)
-      
-      
+      // this.setState({title:this.props.product.title})
     }
   }
 

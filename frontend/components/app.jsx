@@ -13,7 +13,7 @@ import EditReviewContainer from './reviews/edit_review_container';
 import FilteredIndexContainer from './filtered/filtered_index_container';
 import CartContainer from './cart/cart_container';
 import CheckoutContainer from './checkout/checkout_container';
-
+import ThankYou from './thankYou/thankyou';
 export default () => (
   <div>
     <Switch>
@@ -23,6 +23,7 @@ export default () => (
       <ProtectedRoute exact path="/editReview/:review_id" component={EditReviewContainer}/>
       <ProtectedRoute exact path="/cart" component={CartContainer}/>
       <ProtectedRoute exact path="/checkout" component={CheckoutContainer}/>
+      <ProtectedRoute exact path="/thankyou" component={ThankYou}/>
       <Route exact path ="/filteredIndex/:search_terms" component={FilteredIndexContainer}/>
       <Route exact path ="/products/:id" component={ProductShowContainer}/>
       <Route exact path="/" component={SplashContainer} />
