@@ -96,5 +96,9 @@ For my search function, the main operations would be in the backend. where my ap
 
 ```
 
+## Future Todos
+
+* item filtering
+* allow users to post a item for sale
 
 
